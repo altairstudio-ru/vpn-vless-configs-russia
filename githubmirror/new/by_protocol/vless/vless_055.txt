@@ -1,5 +1,3 @@
-vless://a13df940-020c-465f-bc89-ee5279b5cd6a@104.20.168.131:443?security=tls&sni=cp.ylks.xyz&type=ws&host=cp.ylks.xyz&path=%2Fblue# VL-WS-TLS  NA-104.20.168.131:443
-vless://3c5f1408-32e5-46f4-be92-52f1ad58a490@172.105.70.177:48037?security=none&type=grpc# VL-GRPC-NONE  DE-172.105.70.177:48037
 vless://1949f066-bcb0-49be-88e9-74abd940f80e@51.75.30.8:80?security=none&type=ws&path=%2Fhttp# VL-WS-NONE  FR-51.75.30.8:80
 vless://470ae91b-8b99-4659-9c13-e2eb0fe3cdb4@104.20.2.1:443?security=tls&sni=xxx.66500-280b-471c-b2b8-d68b7f9960002.workers.dev&type=ws&host=xxx.66500-280b-471c-b2b8-d68b7f9960002.workers.dev&path=%2F%3Fed%3D2048&fp=chrome&alpn=h3%2Ch2# VL-WS-TLS  NA-104.20.2.1:443
 vless://2928d83a-ca75-4d52-b437-fa78c7601378@108.162.195.173:443?security=tls&sni=freedom-1rj.pages.dev&type=ws&host=freedom-1rj.pages.dev&path=%2Ffreedom-1rj.pages.dev%2F%3Fed%3D2560# VL-WS-TLS  NA-108.162.195.173:443
@@ -498,3 +496,5 @@ vless://921c3e7a-35b5-4499-aef5-363fd050bb29@160.153.0.164:443?security=tls&sni=
 vless://470ae91b-8b99-4659-9c13-e2eb0fe3cdb4@104.24.1.69:443?security=tls&sni=xxx.66500-280b-471c-b2b8-d68b7f9960002.workers.dev&type=ws&host=xxx.66500-280b-471c-b2b8-d68b7f9960002.workers.dev&path=%2F%3Fed%3D2048&fp=chrome&alpn=h3%2Ch2# VL-WS-TLS  NA-104.24.1.69:443
 vless://f0d584bc-342f-4443-ba24-79e4d0e504b1@198.41.214.240:2052?security=none&type=ws&host=late-tooth.granzinhannah.workers.dev&path=%2F%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%3Fed%3D2560# VL-WS-NONE  NA-198.41.214.240:2052
 vless://a13df940-020c-465f-bc89-ee5279b5cd6a@108.162.194.175:443?security=tls&sni=ly.kpcloud.eu.org&type=ws&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-108.162.194.175:443
+vless://a13df940-020c-465f-bc89-ee5279b5cd6a@141.101.122.230:443?security=tls&sni=lc.kpcloud.eu.org&type=ws&host=lc.kpcloud.eu.org&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-141.101.122.230:443
+vless://d64f44d5-66dc-47ee-b991-721b4a96b63d@104.21.46.119:443?security=tls&sni=freedom.tcmugm.workers.dev&type=ws&host=freedom.tcmugm.workers.dev&path=%2F&fp=chrome# VL-WS-TLS  NA-104.21.46.119:443
