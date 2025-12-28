@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
-# Mirror.py — CLEAN MIRROR VERSION (with host:port:scheme de-dup and fixed BASE_DIR)
-# + NEW: split githubmirror/new by protocol into chunks of 500
+# Mirror.py — SMART FILTER VERSION
+# Удаляет мусор (CN, IR, US) сразу при скачивании!
 
 import os
 import shutil
 import requests
 import urllib.parse
+import base64
 
-# Базовый путь — рядом с mirror.py
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-
 BASE_DIR = os.path.join(BASE_PATH, "githubmirror")
 NEW_DIR = os.path.join(BASE_DIR, "new")
 CLEAN_DIR = os.path.join(BASE_DIR, "clean")
 
-PROTOCOLS = [
-    "vless", "vmess", "trojan", "ss",
-    "hysteria", "hysteria2", "hy2", "tuic"
-]
+PROTOCOLS = ["vless", "vmess", "trojan", "ss", "hysteria", "hysteria2", "hy2", "tuic"]
+
+# Страны для ЧЕРНОГО СПИСКА (Мусор)
+BAD_DOMAINS = [".cn", ".ir", ".kr", ".br", ".in"] # Если домен заканчивается на это - в мусорку
+BAD_TAGS = ["🇮🇷", "🇨🇳", "🇺🇸", "🇰🇷", "CN", "IR", "US", "RELAY"] # Если это есть в названии - в мусорку
 
 URLS = [
     "https://github.com/sakha1370/OpenRay/raw/refs/heads/main/output/all_valid_proxies.txt",
@@ -62,100 +62,114 @@ CHUNK_SIZE = 500
 NEW_BY_PROTO_DIR = os.path.join(NEW_DIR, "by_protocol")
 
 def clean_start():
-    if os.path.exists(BASE_DIR):
-        shutil.rmtree(BASE_DIR)
+    if os.path.exists(BASE_DIR): shutil.rmtree(BASE_DIR)
     os.makedirs(NEW_DIR, exist_ok=True)
     os.makedirs(CLEAN_DIR, exist_ok=True)
 
 def protocol_of(line: str):
     for p in PROTOCOLS:
-        if line.startswith(p + "://"):
-            return p
+        if line.startswith(p + "://"): return p
     return None
 
 def extract_host_port_scheme(line: str):
     try:
         u = urllib.parse.urlparse(line)
         return u.hostname, u.port, u.scheme
-    except Exception:
-        return None, None, None
+    except: return None, None, None
+
+def is_garbage(line):
+    """Возвращает True, если ключ мусорный (Китай/Иран/США)"""
+    line_upper = line.upper()
+    
+    # 1. Проверка по названию (тегов)
+    # Декодируем название (после #)
+    name = ""
+    if "#" in line: name = urllib.parse.unquote(line.split("#")[-1]).upper()
+    
+    for tag in BAD_TAGS:
+        if tag in name: return True
+        
+    # 2. Проверка по домену
+    host, _, _ = extract_host_port_scheme(line)
+    if host:
+        host = host.lower()
+        for dom in BAD_DOMAINS:
+            if host.endswith(dom): return True
+            
+    return False
 
 def write_chunks_by_protocol(base_dir: str, protocol: str, items: list, chunk_size: int = 500):
     proto_dir = os.path.join(base_dir, protocol)
     os.makedirs(proto_dir, exist_ok=True)
-
     for start in range(0, len(items), chunk_size):
         part = items[start:start + chunk_size]
         part_num = start // chunk_size + 1
-        out_path = os.path.join(proto_dir, f"{protocol}_{part_num:03d}.txt")
-        with open(out_path, "w", encoding="utf-8") as f:
+        with open(os.path.join(proto_dir, f"{protocol}_{part_num:03d}.txt"), "w", encoding="utf-8") as f:
             f.write("\n".join(part))
 
 def main():
     clean_start()
-
     all_keys = []
-
-    print("Скачиваем источники...")
+    
+    print("Скачивание и ФИЛЬТРАЦИЯ...")
+    
     for i, url in enumerate(URLS, 1):
         try:
-            r = requests.get(url, timeout=15)
-            r.raise_for_status()
-            for line in r.text.splitlines():
-                line = line.strip()
-                if protocol_of(line):
-                    all_keys.append(line)
-            print(f"{i}/{len(URLS)} ОК")
-        except Exception:
-            print(f"{i}/{len(URLS)} ошибка")
+            r = requests.get(url, timeout=10)
+            if r.status_code != 200: continue
+            
+            content = r.text.strip()
+            # Декодирование base64 если нужно
+            if "://" not in content:
+                try: lines = base64.b64decode(content + "==").decode('utf-8', errors='ignore').splitlines()
+                except: lines = content.splitlines()
+            else: lines = content.splitlines()
 
-    # NEW (сырые ключи) - общий файл
-    new_path = os.path.join(NEW_DIR, "all_new.txt")
-    with open(new_path, "w", encoding="utf-8") as f:
+            added_local = 0
+            for line in lines:
+                line = line.strip()
+                if not protocol_of(line): continue
+                
+                # ГЛАВНЫЙ ФИЛЬТР
+                if is_garbage(line): continue
+                
+                all_keys.append(line)
+                added_local += 1
+                
+            print(f"{i}/{len(URLS)}: +{added_local} ключей (остальное мусор)")
+            
+        except: print(f"{i}/{len(URLS)} Ошибка")
+
+    # Сохранение общего файла (Уже чистого!)
+    with open(os.path.join(NEW_DIR, "all_new.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(all_keys))
 
-    # NEW (сырые ключи) - разбиение по протоколам и по 500
+    # Сортировка по протоколам
     raw_buckets = {p: [] for p in PROTOCOLS}
     for line in all_keys:
         p = protocol_of(line)
-        if p:
-            raw_buckets[p].append(line)
+        if p: raw_buckets[p].append(line)
 
     for p, items in raw_buckets.items():
         write_chunks_by_protocol(NEW_BY_PROTO_DIR, p, items, CHUNK_SIZE)
-        chunks = (len(items) + CHUNK_SIZE - 1) // CHUNK_SIZE
-        print(f"NEW {p}: {len(items)} -> {chunks} files")
 
-    # Анти-дубликат по host:port:scheme
+    # Дедупликация (Clean)
     seen_ip = set()
     clean_keys = []
-
     for line in all_keys:
         host, port, scheme = extract_host_port_scheme(line)
-        if not host or not port or not scheme:
-            continue
+        if not host or not port: continue
         key = (host, port, scheme)
-        if key in seen_ip:
-            continue
+        if key in seen_ip: continue
         seen_ip.add(key)
         clean_keys.append(line)
 
-    # CLEAN
-    unique = list(dict.fromkeys(clean_keys))
-    buckets = {p: [] for p in PROTOCOLS}
-
-    for k in unique:
-        p = protocol_of(k)
-        if p:
-            buckets[p].append(k)
-
-    for p, items in buckets.items():
-        out_path = os.path.join(CLEAN_DIR, f"{p}.txt")
-        with open(out_path, "w", encoding="utf-8") as f:
+    for p in PROTOCOLS:
+        items = [k for k in clean_keys if protocol_of(k) == p]
+        with open(os.path.join(CLEAN_DIR, f"{p}.txt"), "w", encoding="utf-8") as f:
             f.write("\n".join(items))
-        print(f"CLEAN {p}: {len(items)}")
-
-    print("\nГОТОВО. githubmirror пересобран с нуля.")
+            
+    print(f"\n✅ ГОТОВО. Всего чистых ключей: {len(clean_keys)}")
 
 if __name__ == "__main__":
     main()
