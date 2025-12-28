@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-# Mirror.py — SMART FILTER VERSION
-# Удаляет мусор (CN, IR, US) сразу при скачивании!
+# Mirror.py — SMART CLEANER
+# Оставляет: Европу, Россию, СНГ и нейтральные ключи.
+# Удаляет: Китай, Иран, США, Корею, Индию, Бразилию.
 
 import os
 import shutil
@@ -15,10 +16,18 @@ CLEAN_DIR = os.path.join(BASE_DIR, "clean")
 
 PROTOCOLS = ["vless", "vmess", "trojan", "ss", "hysteria", "hysteria2", "hy2", "tuic"]
 
-# Страны для ЧЕРНОГО СПИСКА (Мусор)
-BAD_DOMAINS = [".cn", ".ir", ".kr", ".br", ".in"] # Если домен заканчивается на это - в мусорку
-BAD_TAGS = ["🇮🇷", "🇨🇳", "🇺🇸", "🇰🇷", "CN", "IR", "US", "RELAY"] # Если это есть в названии - в мусорку
+# ЧЕРНЫЙ СПИСОК (Явный мусор)
+BAD_DOMAINS = [
+    ".cn", ".ir", ".kr", ".br", ".in", ".vn", ".th", ".id", ".tw", ".jp", ".hk"
+]
+BAD_TAGS = [
+    "🇨🇳", "🇮🇷", "🇺🇸", "🇰🇷", "🇧🇷", "🇮🇳", "🇻🇳", "🇹🇭", "🇮🇩", "🇹🇼", "🇯🇵", "🇭🇰",
+    "CHINA", "IRAN", "USA", "UNITED STATES", "KOREA", "BRAZIL", "INDIA", 
+    "VIETNAM", "THAILAND", "INDONESIA", "TAIWAN", "JAPAN", "HONG KONG",
+    "RELAY", "POOL", "CN_GITHUB", "IR_GITHUB"
+]
 
+# ИСТОЧНИКИ
 URLS = [
     "https://github.com/sakha1370/OpenRay/raw/refs/heads/main/output/all_valid_proxies.txt",
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt",
@@ -78,18 +87,21 @@ def extract_host_port_scheme(line: str):
     except: return None, None, None
 
 def is_garbage(line):
-    """Возвращает True, если ключ мусорный (Китай/Иран/США)"""
+    """
+    Возвращает True (МУСОР), если ключ из Китая, Ирана, США и т.д.
+    Если это Россия, Европа или 'неизвестно' — возвращает False (ОСТАВИТЬ).
+    """
     line_upper = line.upper()
-    
-    # 1. Проверка по названию (тегов)
-    # Декодируем название (после #)
     name = ""
     if "#" in line: name = urllib.parse.unquote(line.split("#")[-1]).upper()
-    
+
+    # 1. Проверка по ТЕГАМ в названии (CN, IR, USA...)
     for tag in BAD_TAGS:
         if tag in name: return True
-        
-    # 2. Проверка по домену
+        # Иногда тег в самом теле ссылки
+        if tag in line_upper: return True
+
+    # 2. Проверка по ДОМЕНУ (.cn, .ir...)
     host, _, _ = extract_host_port_scheme(line)
     if host:
         host = host.lower()
@@ -111,7 +123,7 @@ def main():
     clean_start()
     all_keys = []
     
-    print("Скачивание и ФИЛЬТРАЦИЯ...")
+    print("🚀 Старт: Сбор ключей (RU + EU + Unknown). Удаление мусора (CN, IR, US)...")
     
     for i, url in enumerate(URLS, 1):
         try:
@@ -119,7 +131,6 @@ def main():
             if r.status_code != 200: continue
             
             content = r.text.strip()
-            # Декодирование base64 если нужно
             if "://" not in content:
                 try: lines = base64.b64decode(content + "==").decode('utf-8', errors='ignore').splitlines()
                 except: lines = content.splitlines()
@@ -130,17 +141,17 @@ def main():
                 line = line.strip()
                 if not protocol_of(line): continue
                 
-                # ГЛАВНЫЙ ФИЛЬТР
+                # ФИЛЬТР: ЕСЛИ МУСОР -> ВЫКИДЫВАЕМ
                 if is_garbage(line): continue
                 
                 all_keys.append(line)
                 added_local += 1
                 
-            print(f"{i}/{len(URLS)}: +{added_local} ключей (остальное мусор)")
+            print(f"{i}/{len(URLS)}: Добавлено {added_local} (остальное мусор)")
             
-        except: print(f"{i}/{len(URLS)} Ошибка")
+        except: print(f"{i}/{len(URLS)} Ошибка скачивания")
 
-    # Сохранение общего файла (Уже чистого!)
+    # Сохранение (Cleaned raw list)
     with open(os.path.join(NEW_DIR, "all_new.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(all_keys))
 
@@ -153,7 +164,7 @@ def main():
     for p, items in raw_buckets.items():
         write_chunks_by_protocol(NEW_BY_PROTO_DIR, p, items, CHUNK_SIZE)
 
-    # Дедупликация (Clean)
+    # Дедупликация (Удаляем повторы)
     seen_ip = set()
     clean_keys = []
     for line in all_keys:
@@ -169,7 +180,7 @@ def main():
         with open(os.path.join(CLEAN_DIR, f"{p}.txt"), "w", encoding="utf-8") as f:
             f.write("\n".join(items))
             
-    print(f"\n✅ ГОТОВО. Всего чистых ключей: {len(clean_keys)}")
+    print(f"\n✅ ГОТОВО. Итого чистых ключей (RU+EU): {len(clean_keys)}")
 
 if __name__ == "__main__":
     main()
