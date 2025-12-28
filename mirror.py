@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# Mirror.py — ANTI-FAKE
-# Вырезает "маскирующиеся" под Европу иранские прокси.
+# Mirror.py — SMART FILTER (No Asia, No Africa, No LatAm)
+# Оставляет Европу, Россию, США и "чистые" IP.
 
 import os
 import shutil
@@ -15,70 +15,60 @@ CLEAN_DIR = os.path.join(BASE_DIR, "clean")
 
 PROTOCOLS = ["vless", "vmess", "trojan", "ss", "hysteria", "hysteria2", "hy2", "tuic"]
 
-# 1. БЕЛЫЙ СПИСОК (Что мы ищем)
-GOOD_DOMAINS = [
-    ".ru", ".by", ".kz", ".su", ".rf", 
-    ".de", ".nl", ".fi", ".gb", ".uk", ".fr", ".se", ".pl", ".cz", ".at",
-    ".ch", ".it", ".es", ".no", ".dk", ".be", ".ie", ".lu", ".ee", ".lv", ".lt"
-]
-
-GOOD_TAGS = [
-    "🇷🇺", "🇧🇾", "🇰🇿", "RUSSIA", "MOSCOW", "SPB", "KAZAKHSTAN", "BELARUS", "RU_", "RUS",
-    "🇩🇪", "🇳🇱", "🇫🇮", "🇬🇧", "🇫🇷", "🇸🇪", "🇵🇱", "🇨🇿", "🇦🇹", "🇨🇭",
-    "🇮🇹", "🇪🇸", "🇳🇴", "🇩🇰", "🇧🇪", "🇮🇪", "🇱🇺", "🇪🇪", "🇱🇻", "🇱🇹", "🇪🇺",
-    "GERMANY", "DEUTSCHLAND", "NETHERLANDS", "FINLAND", "UK", "UNITED KINGDOM",
-    "FRANCE", "SWEDEN", "POLAND", "CZECH", "AUSTRIA", "SWISS", "ITALY",
-    "SPAIN", "NORWAY", "DENMARK", "BELGIUM", "IRELAND", "ESTONIA", "LATVIA",
-    "LITHUANIA", "EUROPE", "AMSTERDAM", "FRANKFURT", "LONDON", "PARIS",
-    "FALKENSTEIN", "LIMBURG", "HELSINKI"
-]
-
-# 2. ЧЕРНЫЙ СПИСОК (Слова-паразиты, которые палят фейки)
-# Если эти слова есть в ключе — удаляем, даже если написано "Finland"
+# === ЧЕРНЫЙ СПИСОК (SOFT FILTER) ===
+# Удаляем всё, что имеет ЯВНЫЕ признаки Азии, Африки или Южной Америки.
+# Ключи без подписи (голые IP) — ОСТАВЛЯЕМ (чекер сам проверит).
 BAD_WORDS = [
-    "IRAN", "BAX", "NAJI", "PROXYPRO", "HACKERS855", "V2RAYNG_VPN", 
-    "TELEGRAM", "VPN_TELL", "FREE_V2RAY", "CONFIG_V2RAY", "SIVAND_VPN",
-    "MR_V2RAY", "V2RAY_IR", "ARVANCLOUD", "DERAK", "PARSPACK", # Иранские хостинги
-    "RELAY", "POOL", "SHOP", "STORE", "PAY", "BUY", "SALE", "@"
+    # === 1. АЗИЯ (Ближний Восток, ЦА, ЮВА) ===
+    "IRAN", "TEHRAN", "MASHHAD", "ISFAHAN", "SHIRAZ", "TABRIZ", # Иран
+    "CHINA", "BEIJING", "SHANGHAI", "SHENZHEN", "GUANGZHOU", "HK", "HONGKONG", "TW", "TAIWAN", # Китай
+    "INDIA", "MUMBAI", "DELHI", "BANGALORE", "IN_", # Индия
+    "PAKISTAN", "KARACHI", "LAHORE", "PK_", # Пакистан
+    "TURKEY", "ISTANBUL", "ANKARA", "TR_", # Турция
+    "AFGHANISTAN", "KABUL", "IRAQ", "BAGHDAD", "SYRIA",
+    "SAUDI", "RIYADH", "UAE", "DUBAI", "QATAR",
+    "INDONESIA", "JAKARTA", "VIETNAM", "HANOI", "THAILAND", "BANGKOK",
+    "KOREA", "SEOUL", "JAPAN", "TOKYO", "OSAKA", "SINGAPORE", "SG_",
+    "ISRAEL", "TELAVIV", "AZERBAIJAN", "BAKU", "KAZAKHSTAN", "ALMATY", # KZ часто оставляют, но если надо убрать - вот
+    
+    # === 2. ЮЖНАЯ АМЕРИКА ===
+    "BRAZIL", "SAOPAULO", "RIO", "BR_", 
+    "ARGENTINA", "BUENOSAIRES", "AR_",
+    "CHILE", "COLOMBIA", "MEXICO", "PERU", "VENEZUELA",
+
+    # === 3. АФРИКА ===
+    "EGYPT", "CAIRO", 
+    "NIGERIA", "LAGOS", 
+    "SOUTHAFRICA", "JOHANNESBURG", "CAPETOWN", "ZA_",
+    "MOROCCO", "ALGERIA", "TUNISIA", "KENYA", "ETHIOPIA",
+
+    # === 4. МУСОРНЫЕ СЛОВА / ПРОВАЙДЕРЫ ===
+    "CLOUDFLARE", "CF_CDN", "WORKER", "PAGES_DEV", # Бесплатный CDN мусор
+    "MCI", "MTN", "IRANCELL", "RIGHTEL", "ARVAN", "DERAK", "PARSPACK", # Иран телеком
+    "V2RAYNG", "VPN_TELL", "SIVAND", "NAJI", "BAX", "HACKER", "FREE_VPN",
+    "RELAY", "POOL", "SHOP", "STORE", "VIP", "PREMIUM", # Реклама
+
+    # === 5. ФЛАГИ (Эмодзи стран-изгоев для фильтра) ===
+    "🇮🇷", "🇨🇳", "🇮🇳", "🇵🇰", "🇹🇷", "🇦🇫", "🇮🇶", "🇸🇦", "🇦🇪", "🇮🇩", "🇻🇳", "🇹🇭", 
+    "🇰🇷", "🇯🇵", "🇹🇼", "🇸🇬", "🇧🇷", "🇦🇷", "🇲🇽", "🇿🇦", "🇪🇬", "🇳🇬", "🇰🇪", "🇮🇱"
 ]
 
+# ИСТОЧНИКИ
 URLS = [
+    # Большие миксы (World/Mix)
     "https://github.com/sakha1370/OpenRay/raw/refs/heads/main/output/all_valid_proxies.txt",
-    "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt",
     "https://raw.githubusercontent.com/yitong2333/proxy-minging/refs/heads/main/v2ray.txt",
-    "https://raw.githubusercontent.com/acymz/AutoVPN/refs/heads/main/data/V2.txt",
-    "https://raw.githubusercontent.com/miladtahanian/V2RayCFGDumper/refs/heads/main/config.txt",
     "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
-    "https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt",
-    "https://raw.githubusercontent.com/YasserDivaR/pr0xy/refs/heads/main/ShadowSocks2021.txt",
-    "https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt",
-    "https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/vless",
-    "https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt",
     "https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all",
-    "https://github.com/Kwinshadow/TelegramV2rayCollector/raw/refs/heads/main/sublinks/mix.txt",
-    "https://github.com/LalatinaHub/Mineral/raw/refs/heads/master/result/nodes",
-    "https://raw.githubusercontent.com/miladtahanian/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
     "https://github.com/MhdiTaheri/V2rayCollector_Py/raw/refs/heads/main/sub/Mix/mix.txt",
-    "https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt",
-    "https://github.com/MhdiTaheri/V2rayCollector/raw/refs/heads/main/sub/mix",
-    "https://raw.githubusercontent.com/mehran1404/Sub_Link/refs/heads/main/V2RAY-Sub.txt",
-    "https://raw.githubusercontent.com/shabane/kamaji/master/hub/merged.txt",
-    "https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/main/output/base64/mix-uri",
-    "https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet.txt",
-    "https://raw.githubusercontent.com/STR97/STRUGOV/refs/heads/main/STR.BYPASS",
-    "https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt",
-    "https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_clash.yaml",
-    "https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Vless.txt",
-    "https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt",
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_list.json",
-    "https://raw.githubusercontent.com/NiREvil/vless/main/sub/SSTime",
-    "https://raw.githubusercontent.com/ndsphonemy/proxy-sub/main/speed.txt",
-    "https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt",
-    "https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
     "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/all.txt",
-    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile.txt",
-    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Cable.txt",
+    "https://github.com/LalatinaHub/Mineral/raw/refs/heads/master/result/nodes",
+    "https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet.txt",
+    "https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt",
+    "https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt",
+    "https://raw.githubusercontent.com/mehran1404/Sub_Link/refs/heads/main/V2RAY-Sub.txt"
 ]
 
 CHUNK_SIZE = 500
@@ -94,46 +84,26 @@ def protocol_of(line: str):
         if line.startswith(p + "://"): return p
     return None
 
-def extract_host_port_scheme(line: str):
-    try:
-        u = urllib.parse.urlparse(line)
-        return u.hostname, u.port, u.scheme
-    except: return None, None, None
-
-def is_fake_or_garbage(line):
+def is_garbage_soft(line):
     """
-    Проверяет ключ на 'вшивость'.
-    Возвращает True, если ключ ХОРОШИЙ (прошел проверки).
-    Возвращает False, если ключ ПЛОХОЙ (нет признаков EU/RU или есть слова-паразиты).
+    Мягкая фильтрация:
+    Удаляет только явные совпадения с черным списком.
     """
     line_upper = line.upper()
-    name = ""
-    if "#" in line: name = urllib.parse.unquote(line.split("#")[-1]).upper()
-
-    # 1. СНАЧАЛА ИЩЕМ ПЛОХИЕ СЛОВА (Anti-Fake)
+    
+    # 1. Проверка на плохие слова
     for bad in BAD_WORDS:
-        if bad in line_upper: return False # Нашли "iranproxy" -> В МУСОР
+        if bad in line_upper: 
+            return False # Мусор
 
-    # 2. ТЕПЕРЬ ИЩЕМ ХОРОШИЕ ПРИЗНАКИ (Whitelist)
-    is_good = False
+    # 2. Проверка на локальные адреса
+    if "127.0.0.1" in line or "LOCALHOST" in line_upper:
+        return False
+
+    # 3. Слишком короткие строки
+    if len(line) < 15: return False
     
-    # По тегам
-    for tag in GOOD_TAGS:
-        if tag in name or tag in line_upper:
-            is_good = True
-            break
-            
-    # По домену
-    if not is_good:
-        host, _, _ = extract_host_port_scheme(line)
-        if host:
-            host = host.lower()
-            for dom in GOOD_DOMAINS:
-                if host.endswith(dom):
-                    is_good = True
-                    break
-    
-    return is_good
+    return True
 
 def write_chunks_by_protocol(base_dir: str, protocol: str, items: list, chunk_size: int = 500):
     proto_dir = os.path.join(base_dir, protocol)
@@ -148,60 +118,61 @@ def main():
     clean_start()
     all_keys = []
     
-    print("🚀 Старт: Сбор ТОЛЬКО Чистых (Без фейков)...")
+    print("🚀 Start Mirror: Anti-Asia/Africa/LatAm Mode...")
     
     for i, url in enumerate(URLS, 1):
         try:
-            r = requests.get(url, timeout=10)
+            print(f"Loading {i}/{len(URLS)}: {url.split('/')[-1]}...")
+            r = requests.get(url, timeout=15)
             if r.status_code != 200: continue
             
             content = r.text.strip()
-            if "://" not in content:
-                try: lines = base64.b64decode(content + "==").decode('utf-8', errors='ignore').splitlines()
+            # Декодируем Base64
+            if "://" not in content and len(content) > 10:
+                try: 
+                    missing_padding = len(content) % 4
+                    if missing_padding: content += '=' * (4 - missing_padding)
+                    decoded = base64.b64decode(content).decode('utf-8', errors='ignore')
+                    lines = decoded.splitlines()
                 except: lines = content.splitlines()
-            else: lines = content.splitlines()
+            else: 
+                lines = content.splitlines()
 
             added_local = 0
             for line in lines:
                 line = line.strip()
-                if not protocol_of(line): continue
+                if not line or not protocol_of(line): continue
                 
-                # ГЛАВНАЯ ПРОВЕРКА
-                if is_fake_or_garbage(line):
+                # ФИЛЬТРАЦИЯ
+                if is_garbage_soft(line):
                     all_keys.append(line)
                     added_local += 1
-                
-            print(f"{i}/{len(URLS)}: +{added_local}")
             
-        except: print(f"{i}/{len(URLS)} Ошибка")
+            print(f"  -> Found {added_local} valid keys")
+            
+        except Exception as e: 
+            print(f"  -> Error: {e}")
 
+    # Убираем дубли
+    all_keys = list(set(all_keys))
+    
+    print(f"\nСохранение {len(all_keys)} ключей...")
+
+    # Сохраняем общий файл
     with open(os.path.join(NEW_DIR, "all_new.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(all_keys))
 
+    # Сохраняем по протоколам (опция)
     raw_buckets = {p: [] for p in PROTOCOLS}
     for line in all_keys:
         p = protocol_of(line)
         if p: raw_buckets[p].append(line)
 
     for p, items in raw_buckets.items():
-        write_chunks_by_protocol(NEW_BY_PROTO_DIR, p, items, CHUNK_SIZE)
+        if items:
+            write_chunks_by_protocol(NEW_BY_PROTO_DIR, p, items, CHUNK_SIZE)
 
-    seen_ip = set()
-    clean_keys = []
-    for line in all_keys:
-        host, port, scheme = extract_host_port_scheme(line)
-        if not host or not port: continue
-        key = (host, port, scheme)
-        if key in seen_ip: continue
-        seen_ip.add(key)
-        clean_keys.append(line)
-
-    for p in PROTOCOLS:
-        items = [k for k in clean_keys if protocol_of(k) == p]
-        with open(os.path.join(CLEAN_DIR, f"{p}.txt"), "w", encoding="utf-8") as f:
-            f.write("\n".join(items))
-            
-    print(f"\n✅ ГОТОВО. Чистейших ключей: {len(clean_keys)}")
+    print(f"✅ DONE. Saved to {NEW_DIR}/all_new.txt")
 
 if __name__ == "__main__":
     main()
