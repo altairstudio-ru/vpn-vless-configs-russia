@@ -1,3 +1,12 @@
+vless://cfe70656-5432-46f8-a7e4-0bf69f7a3ed5@91.107.190.98:48476?type=tcp&encryption=none&security=reality&pbk=vhlEFttiskr1M-4QmXAcqTHe0p-kFTbp8u5LSsaJWS0&fp=chrome&sni=cloudflare.com&sid=eb806375&spx=/#4Jadi-11596
+vless://cfed0111-aba5-4a0e-ae81-406bda85d6ee@85.9.96.148:3478?security=tls&sni=dibadownload.store&alpn=http/1.1,h2,h3&allowInsecure=1&fp=chrome&type=grpc&encryption=none#4Jadi-11597
+vless://cfed0111-aba5-4a0e-ae81-406bda85d6ee@85.9.96.209:3478?security=tls&sni=dibadownload.store&alpn=http/1.1,h2,h3&allowInsecure=1&fp=chrome&type=grpc&encryption=none#4Jadi-11598
+vless://cfed0111-aba5-4a0e-ae81-406bda85d6ee@85.9.97.101:3478?security=tls&sni=dibadownload.store&alpn=http/1.1,h2,h3&allowInsecure=1&fp=chrome&type=grpc&encryption=none#4Jadi-11599
+vless://cfed0111-aba5-4a0e-ae81-406bda85d6ee@85.9.97.250:3478?security=tls&sni=dibadownload.store&alpn=http/1.1,h2,h3&allowInsecure=1&fp=chrome&type=grpc&encryption=none#4Jadi-11600
+vless://cfed0111-aba5-4a0e-ae81-406bda85d6ee@85.9.97.252:3478?security=tls&sni=dibadownload.store&alpn=http/1.1,h2,h3&allowInsecure=1&fp=chrome&type=grpc&encryption=none#4Jadi-11601
+vless://cfed0111-aba5-4a0e-ae81-406bda85d6ee@85.9.97.82:3478?security=tls&sni=dibadownload.store&alpn=http/1.1,h2,h3&allowInsecure=1&fp=chrome&type=grpc&encryption=none#4Jadi-11602
+vless://cfed0111-aba5-4a0e-ae81-406bda85d6ee@85.9.98.26:3478?security=tls&sni=dibadownload.store&alpn=http/1.1,h2,h3&allowInsecure=1&fp=chrome&type=grpc&encryption=none#4Jadi-11603
+vless://cloud1163@cloud.whitenet.online:443?security=reality&encryption=none&pbk=uF1AdCusRp-alIOTD8ULbc4rmBYHlFn5FXqY3ymWAlc&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=eh.vk.com&sid=ab1cd2#4Jadi-11604
 vless://d002299a-418f-4d76-a04a-50837b44227e@172.66.40.99:8880?encryption=none&type=ws&host=websocket.network.www.speedtest.net.kkoccashor.vegaskala.com.&path=/@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN?ed=2048&security=none#4Jadi-11605
 vless://d00d13b2-5cd3-4648-afa9-807983647ed8@144.31.3.129:443?encryption=none&type=ws&host=sinavm.ir&path=/&security=none#4Jadi-11606
 vless://d00d13b2-5cd3-4648-afa9-807983647ed8@144.31.3.129:443?path=/&security=&encryption=none&host=sinavm.ir&type=ws#4Jadi-11607
@@ -489,12 +498,3 @@ vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.86:8880?mode=gun&securit
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.86:8880?mode=gun&security=none&encryption=none&authority=/@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-?ed=2560&type=grpc&sni=#4Jadi-12093
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.87:8880?mode=gun&security=none&encryption=none&authority=/?BIA_TELEGRAM#4Jadi-12094
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.88:8880?mode=gun&security=&encryption=none&authority=Join----TM#4Jadi-12095
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.88:8880?mode=gun&security=none&encryption=none&authority=/?BIA_TELEGRAM#4Jadi-12096
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.89:8880?mode=gun&security=none&encryption=none&type=grpc#4Jadi-12097
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.92:8880?mode=gun&security=none&encryption=none&authority=/?BIA_TELEGRAMV2rayBaaz&type=grpc#4Jadi-12098
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.92:8880?mode=gun&security=none&encryption=none&type=grpc#4Jadi-12099
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.94:8880?mode=gun&security=none&encryption=none&authority=/?BIA_TELEGRAM#4Jadi-12100
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.96:8880?mode=gun&security=none&encryption=none&authority=/?BIA_TELEGRAM#4Jadi-12101
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.97:8880?mode=gun&security=&encryption=none&authority=Join----TM#4Jadi-12102
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.97:8880?mode=gun&security=&encryption=none&type=grpc#4Jadi-12103
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.97:8880?mode=gun&security=none&encryption=none&authority=/?BIA_TELEGRAM#4Jadi-12104
