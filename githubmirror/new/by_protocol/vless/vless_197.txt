@@ -96,8 +96,6 @@ vless://b1723c14-8180-4311-a65f-fc2665c6b51f@188.114.98.112:80?path=/JOIN---PLAN
 vless://b1723c14-8180-4311-a65f-fc2665c6b51f@188.114.98.112:80?path=🔒
 vless://b17ec18e-99af-40af-962b-0ad1b987d740@65.109.201.108:443?security=none&encryption=none&headerType=none&type=tcp
 vless://b17ec18e-99af-40af-962b-0ad1b987d740@65.109.201.108:443?security=none&encryption=none&headerType=none&type=tcp#@NIM_VPN_ir
-vless://b1840f07-6100-4871-97df-0e37b9649867@zahedan.dns-dynamic.net:46063?mode=gun&security=tls&encryption=none&fp=chrome&type=grpc&sni=zahedan.dns-dynamic.net#🇸🇪[openproxylist.com]
-vless://b1840f07-6100-4871-97df-0e37b9649867@zahedan.dns-dynamic.net:46063?mode=gun&security=tls&encryption=none&fp=chrome&type=grpc&sni=🔒
 vless://b186e4de-9f54-426e-9a8d-fbd8927ae5ac@45.8.146.207:80?path=🔒
 vless://b18bab8f-ce71-46a6-85b5-998a82108899@panel-finland-1.subcenter.net:2001?type=tcp&path=🔒
 vless://b18f9f3f-77ee-49de-9d44-9b4483bb1445@91.92.43.211:8652?mode=gun&security=reality&encryption=none&pbk=Xkw1KXtayEYaShaQLENJzZJmP3KQXpK7O5_Gn6qpIwM&fp=chrome&type=grpc&serviceName=DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs%3Fed%3D2560&sni=🔒
@@ -498,3 +496,5 @@ vless://b5471668-94dc-4ea5-ae97-3bb9dabcd2a9@216.133.149.139:23581?security=real
 vless://b5471668-94dc-4ea5-ae97-3bb9dabcd2a9@216.133.149.139:23581?security=reality&encryption=none&pbk=EOYTqph-go2SazIPcSDl5pJGNyOnrR0mWaL8Tc_paEM&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=🔒
 vless://b5485d98-70ed-4ad0-bc9d-ebf42f8d6616@sg2vless.ipservers.xyz:443?encryption=none&security=tls&sni=🔒
 vless://b550a101-63fe-4862-bfd3-8b87bb4168dd@104.16.1.47:80/?type=ws&encryption=none&flow=&host=flat-bread-ddb6-ppal03.joriy39169.workers.dev&path=🔒
+vless://b550a101-63fe-4862-bfd3-8b87bb4168dd@104.16.1.47:80?encryption=none&security=none&type=ws&host=flat-bread-ddb6-ppal03.joriy39169.workers.dev&path=🔒
+vless://b550a101-63fe-4862-bfd3-8b87bb4168dd@104.24.201.19:80/?type=ws&encryption=none&flow=&host=flat-bread-ddb6-ppal03.joriy39169.workers.dev&path=🔒
