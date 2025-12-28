@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# Mirror.py — SMART CLEANER
-# Оставляет: Европу, Россию, СНГ и нейтральные ключи.
-# Удаляет: Китай, Иран, США, Корею, Индию, Бразилию.
+# Mirror.py — WHITELIST ONLY (Super Clean)
+# Оставляет ТОЛЬКО то, что явно подписано как Европа или Россия.
+# Все безымянные IP и мусор удаляются.
 
 import os
 import shutil
@@ -16,18 +16,26 @@ CLEAN_DIR = os.path.join(BASE_DIR, "clean")
 
 PROTOCOLS = ["vless", "vmess", "trojan", "ss", "hysteria", "hysteria2", "hy2", "tuic"]
 
-# ЧЕРНЫЙ СПИСОК (Явный мусор)
-BAD_DOMAINS = [
-    ".cn", ".ir", ".kr", ".br", ".in", ".vn", ".th", ".id", ".tw", ".jp", ".hk"
-]
-BAD_TAGS = [
-    "🇨🇳", "🇮🇷", "🇺🇸", "🇰🇷", "🇧🇷", "🇮🇳", "🇻🇳", "🇹🇭", "🇮🇩", "🇹🇼", "🇯🇵", "🇭🇰",
-    "CHINA", "IRAN", "USA", "UNITED STATES", "KOREA", "BRAZIL", "INDIA", 
-    "VIETNAM", "THAILAND", "INDONESIA", "TAIWAN", "JAPAN", "HONG KONG",
-    "RELAY", "POOL", "CN_GITHUB", "IR_GITHUB"
+# БЕЛЫЙ СПИСОК (Только это проходит)
+GOOD_DOMAINS = [
+    ".ru", ".by", ".kz", ".su", ".rf", # СНГ
+    ".de", ".nl", ".fi", ".gb", ".uk", ".fr", ".se", ".pl", ".cz", ".at",
+    ".ch", ".it", ".es", ".no", ".dk", ".be", ".ie", ".lu", ".ee", ".lv", ".lt" # Европа
 ]
 
-# ИСТОЧНИКИ
+GOOD_TAGS = [
+    # Россия/СНГ
+    "🇷🇺", "🇧🇾", "🇰🇿", "RUSSIA", "MOSCOW", "SPB", "KAZAKHSTAN", "BELARUS", "RU_", "RUS",
+    # Европа
+    "🇩🇪", "🇳🇱", "🇫🇮", "🇬🇧", "🇫🇷", "🇸🇪", "🇵🇱", "🇨🇿", "🇦🇹", "🇨🇭",
+    "🇮🇹", "🇪🇸", "🇳🇴", "🇩🇰", "🇧🇪", "🇮🇪", "🇱🇺", "🇪🇪", "🇱🇻", "🇱🇹", "🇪🇺",
+    "GERMANY", "DEUTSCHLAND", "NETHERLANDS", "FINLAND", "UK", "UNITED KINGDOM",
+    "FRANCE", "SWEDEN", "POLAND", "CZECH", "AUSTRIA", "SWISS", "ITALY",
+    "SPAIN", "NORWAY", "DENMARK", "BELGIUM", "IRELAND", "ESTONIA", "LATVIA",
+    "LITHUANIA", "EUROPE", "AMSTERDAM", "FRANKFURT", "LONDON", "PARIS",
+    "FALKENSTEIN", "LIMBURG", "HELSINKI"
+]
+
 URLS = [
     "https://github.com/sakha1370/OpenRay/raw/refs/heads/main/output/all_valid_proxies.txt",
     "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt",
@@ -86,26 +94,25 @@ def extract_host_port_scheme(line: str):
         return u.hostname, u.port, u.scheme
     except: return None, None, None
 
-def is_garbage(line):
+def is_good_key(line):
     """
-    Возвращает True (МУСОР), если ключ из Китая, Ирана, США и т.д.
-    Если это Россия, Европа или 'неизвестно' — возвращает False (ОСТАВИТЬ).
+    Возвращает True, ТОЛЬКО если найдены признаки России или Европы.
+    Безымянные IP идут в мусор.
     """
     line_upper = line.upper()
     name = ""
     if "#" in line: name = urllib.parse.unquote(line.split("#")[-1]).upper()
 
-    # 1. Проверка по ТЕГАМ в названии (CN, IR, USA...)
-    for tag in BAD_TAGS:
+    # 1. Проверка по ТЕГАМ (Russia, Germany, Flags...)
+    for tag in GOOD_TAGS:
         if tag in name: return True
-        # Иногда тег в самом теле ссылки
         if tag in line_upper: return True
 
-    # 2. Проверка по ДОМЕНУ (.cn, .ir...)
+    # 2. Проверка по ДОМЕНУ (.ru, .de...)
     host, _, _ = extract_host_port_scheme(line)
     if host:
         host = host.lower()
-        for dom in BAD_DOMAINS:
+        for dom in GOOD_DOMAINS:
             if host.endswith(dom): return True
             
     return False
@@ -123,7 +130,7 @@ def main():
     clean_start()
     all_keys = []
     
-    print("🚀 Старт: Сбор ключей (RU + EU + Unknown). Удаление мусора (CN, IR, US)...")
+    print("🚀 Старт: Сбор ТОЛЬКО подписанной Европы и России...")
     
     for i, url in enumerate(URLS, 1):
         try:
@@ -141,17 +148,17 @@ def main():
                 line = line.strip()
                 if not protocol_of(line): continue
                 
-                # ФИЛЬТР: ЕСЛИ МУСОР -> ВЫКИДЫВАЕМ
-                if is_garbage(line): continue
+                # ЖЕСТКИЙ ФИЛЬТР: ТОЛЬКО БЕЛЫЙ СПИСОК
+                if not is_good_key(line): continue
                 
                 all_keys.append(line)
                 added_local += 1
                 
-            print(f"{i}/{len(URLS)}: Добавлено {added_local} (остальное мусор)")
+            print(f"{i}/{len(URLS)}: Взято {added_local} (остальное в мусор)")
             
-        except: print(f"{i}/{len(URLS)} Ошибка скачивания")
+        except: print(f"{i}/{len(URLS)} Ошибка")
 
-    # Сохранение (Cleaned raw list)
+    # Сохранение (теперь файл будет маленьким и чистым)
     with open(os.path.join(NEW_DIR, "all_new.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(all_keys))
 
@@ -164,7 +171,7 @@ def main():
     for p, items in raw_buckets.items():
         write_chunks_by_protocol(NEW_BY_PROTO_DIR, p, items, CHUNK_SIZE)
 
-    # Дедупликация (Удаляем повторы)
+    # Дедупликация
     seen_ip = set()
     clean_keys = []
     for line in all_keys:
@@ -180,7 +187,7 @@ def main():
         with open(os.path.join(CLEAN_DIR, f"{p}.txt"), "w", encoding="utf-8") as f:
             f.write("\n".join(items))
             
-    print(f"\n✅ ГОТОВО. Итого чистых ключей (RU+EU): {len(clean_keys)}")
+    print(f"\n✅ ГОТОВО. Чистых ключей: {len(clean_keys)}")
 
 if __name__ == "__main__":
     main()
