@@ -143,6 +143,11 @@ trojan://22367c45-f6c4-4ca8-8d52-d9787d7bbe91@mfa.gov.ua:2096?path=/proxyip=210.
 trojan://e2e3b171-33a8-4c8f-9e5f-ae6e92299e40@ivory.qzz.io:443?path=/46.232.122.240:8000&amp;security=tls&amp;host=ivory.qzz.io&amp;type=ws&amp;sni=ivory.qzz.io#All--@V2rayAlpha-6
 trojan://22367c45-f6c4-4ca8-8d52-d9787d7bbe91@cf.877774.xyz:2087?path=/proxyip=210.61.97.241:81&amp;security=tls&amp;host=cm2-bpg.filegear-sg.me&amp;type=ws&amp;sni=cm2-bpg.filegear-sg.me#All--@V2rayAlpha-7
 trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@bisque.qzz.io:443?path=/66.135.4.222:8443&amp;security=tls&amp;host=bisque.qzz.io&amp;type=ws&amp;sni=bisque.qzz.io#All--@V2rayAlpha-8
+trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@blueivy.qzz.io:443?path=/192.252.182.52:7602&amp;security=tls&amp;host=blueivy.qzz.io&amp;type=ws&amp;sni=blueivy.qzz.io#WiFi-@V2rayAlpha--6
+trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@bisque.qzz.io:443?path=/66.135.4.222:8443&amp;security=tls&amp;host=bisque.qzz.io&amp;type=ws&amp;sni=bisque.qzz.io#All-@V2rayAlpha--1
+trojan://e2e3b171-33a8-4c8f-9e5f-ae6e92299e40@ivory.qzz.io:443?path=/46.232.122.240:8000&amp;security=tls&amp;host=ivory.qzz.io&amp;type=ws&amp;sni=ivory.qzz.io#All-@V2rayAlpha--2
+trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@tronblue.qzz.io:443?path=/152.32.255.24:587&amp;security=tls&amp;host=tronblue.qzz.io&amp;type=ws&amp;sni=tronblue.qzz.io#All-@V2rayAlpha--3
+trojan://13e71ddb-908c-45e0-993c-da482d848c88@seashell.qzz.io:443?path=/156.254.114.120:30011&amp;security=tls&amp;host=seashell.qzz.io&amp;type=ws&amp;sni=seashell.qzz.io#All-@V2rayAlpha--4
 trojan://019a8c1f-3d28-74e8-8a8e-40045d7ec77f@38.207.160.35:443/?type=tcp&amp;security=tls&amp;sni=www.bilibili.com&amp;allowInsecure=1#🇭🇰 HK
 trojan://BxceQaOe@58.152.26.173:443/?type=tcp&amp;security=tls&amp;allowInsecure=1#香港
 trojan://59a62e95-6262-4ba1-8027-c642b7c72713@green2.cdntencentmusic.com:31101/?type=tcp&amp;security=tls&amp;sni=green2.cdntencentmusic.com#🇭🇰 香港
@@ -200,13 +205,11 @@ trojan://BxceQaOe@58.152.46.60:443?security=tls&amp;allowInsecure=1&amp;type=tcp
 trojan://BxceQaOe@203.198.84.221:443?security=tls&amp;sni=t.me/ripaojiedian&amp;allowInsecure=1&amp;type=tcp&amp;headerType=none#🇭🇰_香港
 trojan://BxceQaOe@203.198.84.221:443?security=tls&amp;sni=t.me/ripaojiedian&amp;allowInsecure=1&amp;type=tcp&amp;headerType=none#🇭🇰_香港
 trojan://o2XA8dydWM@free.tharuwa.store:2020?path=/FREE By Tharuwa (0767597317)&amp;security=tls&amp;alpn=h2,http/1.1&amp;fp=chrome&amp;type=ws&amp;sni=zoom.us#Free ByTharuwa (t.me/z_z_z_zz_z)
-trojan://telegram-id-directvpn@63.180.109.216:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#خرید وی پی ان ارزان @NoraPingBot
-trojan://ace1qxDyr_-GmIUgK.1Tnjb6ikAN@45.77.20.207:10435/?type=tcp&amp;security=tls&amp;sni=fuzzyfonduepotstand.oscillatingovenmitt.click#خرید وی پی ان ارزان @NoraPingBot
-trojan://telegram-id-directvpn@18.184.16.207:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#خرید وی پی ان ارزان @NoraPingBot
 trojan://telegram-id-privatevpns@16.171.87.45:22222?security=tls&amp;sni=trojan.burgerip.co.uk&amp;type=tcp&amp;alpn=http/1.1#خرید وی پی ان ارزان @NoraPingBot
 trojan://ace1qxDyr_-GmIUgK.1Tnjb6ikAN@45.77.20.207:10435/?type=tcp&amp;security=tls&amp;sni=fuzzyfonduepotstand.oscillatingovenmitt.click#خرید وی پی ان ارزان @NoraPingBot
 trojan://telegram-id-privatevpns@35.180.171.33:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#خرید وی پی ان ارزان @NoraPingBot
 trojan://telegram-id-privatevpns@3.72.120.152:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#خرید وی پی ان ارزان @NoraPingBot
+trojan://telegram-id-directvpn@3.126.96.173:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#خرید وی پی ان ارزان @NoraPingBot
 trojan://FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D@kuame.missionsec.us:443?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=kuame.missionsec.us#Japan Klayer LLC
 trojan://BxceQaOe@219.79.214.159:443?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=t.me%2Fripaojiedian#Hong Kong Netvigator
 trojan://44e660b0ee21cf3ac66aee2c08af85d2@160.16.107.37:3169?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=www.nintendogames.net#Japan NTT Pc
@@ -238,10 +241,11 @@ trojan://bpb-trojan@www.speedtest.net:8443?path=/trawQuYV0dBGjBNVXI?ed=2560&amp;
 trojan://bpb-trojan@172.66.44.87:8443?path=/trpXEf7QIPdwhQjYkV?ed=2560&amp;security=tls&amp;alpn=h2,http/1.1&amp;host=10-bpb-worker-panel.pages.dev&amp;fp=randomized&amp;type=ws&amp;sni=10-bpb-WoRkER-pAnEl.pAGEs.DeV#FreeVPNHomes+10-12
 trojan://e2e3b171-33a8-4c8f-9e5f-ae6e92299e40@ivory.qzz.io:443?path=/46.232.122.240:8000&amp;security=tls&amp;host=ivory.qzz.io&amp;type=ws&amp;sni=ivory.qzz.io#@Golestan_VPN - 👈 کانفیگ
 trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@tronblue.qzz.io:443?path=/152.32.255.24:587&amp;security=tls&amp;host=tronblue.qzz.io&amp;type=ws&amp;sni=tronblue.qzz.io#@Golestan_VPN - 👈 کانفیگ
-trojan://44e660b0ee21cf3ac66aee2c08af85d2@160.16.107.37:3169?security=tls&amp;sni=www.nintendogames.net&amp;path=/#
-trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@tronblue.qzz.io:443?security=tls&amp;sni=tronblue.qzz.io&amp;type=ws&amp;host=tronblue.qzz.io&amp;path=/152.32.255.24:587#
 trojan://13e71ddb-908c-45e0-993c-da482d848c88@seashell.qzz.io:443?security=tls&amp;sni=seashell.qzz.io&amp;type=ws&amp;host=seashell.qzz.io&amp;path=/156.254.114.120:30011#
 trojan://44e660b0ee21cf3ac66aee2c08af85d2@153.121.67.215:3093?security=tls&amp;sni=www.nintendogames.net&amp;path=/#
+trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@tronblue.qzz.io:443?security=tls&amp;sni=tronblue.qzz.io&amp;type=ws&amp;host=tronblue.qzz.io&amp;path=/152.32.255.24:587#
+trojan://44e660b0ee21cf3ac66aee2c08af85d2@160.16.116.227:4054?security=tls&amp;sni=www.nintendogames.net&amp;path=/#
+trojan://44e660b0ee21cf3ac66aee2c08af85d2@160.16.116.227:4054?security=tls&amp;sni=www.nintendogames.net&amp;path=/#
 trojan://6a5cb4b7-8dad-3077-b21c-6f47e8dfb9af@iplc.xiaohouzi.club:20011?allowInsecure=1&amp;peer=supaz012.xiaohouzi.club#定制专线：@QS00008
 trojan://POORIARED@172.67.134.185:443?type=ws&amp;path=/eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560&amp;security=tls&amp;fp=chrome&amp;sni=reDfRee8.REDFree8.ir#@KAFING_2
 trojan://POORIARED@172.67.134.185:443?type=ws&amp;path=/eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560&amp;security=tls&amp;fp=chrome&amp;sni=reDfRee8.REDFree8.ir#@KAFING_2
@@ -494,7 +498,3 @@ trojan://HQk9wst3vK@ip.dudeuni.com:52251/?type=tcp&amp;security=tls&amp;sni=ip.d
 trojan://ypDt8RkT7J@207.211.215.169:43118?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;fp=chrome&amp;type=tcp&amp;sni=tpmwf.phooeyunfold.com#🇹🇷+ترکیه+🕊️T.me/X4Azadi
 trojan://ypDt8RkT7J@212.102.54.11:43118?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;fp=random&amp;type=tcp&amp;sni=tpmrq.phooeyunfold.com#🇮🇹+ایتالیا+🕊️@Gozargah_Azadi
 trojan://ba74833c-8c0f-4dcd-8cbc-13e3c32d3765@185.236.233.111:2053?sni=ftp.debian.org#🇷🇺_RU_俄罗斯联邦_3
-trojan://63db084a-e2ce-46db-9dd6-d4ed2c3d2663@sg01.freeflyingcloud.xyz:35702?sni=sg01.freeflyingcloud.xyz#🇸🇬_SG_新加坡_5
-trojan://0b1371aa-649d-41dc-9126-338c87936500@95.164.33.62:443?allowInsecure=1&amp;sni=sourceforge.net&amp;ws=1&amp;wspath=/websocket#瑞典-143.7KB/s
-trojan://3bedceff-1956-4f2c-a9c1-45c74568a560@ty11t.twty.dynu.net:13761?allowInsecure=1#台湾-5.63MB/s
-trojan://299025b9-6b55-430c-be38-9a18c06873ac@china3.one.edu.kg:12051?allowInsecure=1&amp;sni=china3.one.edu.kg#中转节点-2.60MB/s
