@@ -1,3 +1,5 @@
+vless://1d4e36cb-344b-43b0-ba5a-7b6b292ab691@64.181.208.22:40000?security=reality&flow=xtls-rprx-vision&sni=www.python.org&type=tcp&fp=firefox&pbk=qCaV2kI9Oxts987YzeFkyyQHMnJnd5YA1GJuAkRVImg&sid=19e5124d# VL-TCP-RLT  US-64.181.208.22:40000
+vless://661ea549-3367-4c37-b307-253cfe8d2ee6@129.146.128.183:18443?security=reality&sni=www.tesla.com&type=tcp&fp=ios&pbk=8233FxCRw1a_aCJ8d1HwHBMD_fABUNNW7rsrFe3vK0s&sid=e6658462# VL-TCP-RLT  US-129.146.128.183:18443
 vless://fbe02c0b-775f-4431-8615-a9497255c876@13.248.252.114:443?security=reality&flow=xtls-rprx-vision&sni=none.felinetest.site&type=tcp&fp=chrome&pbk=fabWUdBWxh7NsMaqOF35petD3ljQbKf6OSDnROV9jDs&sid=6f9deca7# VL-TCP-RLT  US-13.248.252.114:443
 vless://d83b0aff-fd06-49ef-afce-244f3542210d@138.68.175.143:2082?security=reality&flow=xtls-rprx-vision&sni=canva.com&type=tcp&fp=firefox&pbk=DSryCgoqwyu9yP90fm_S9dnbTHVRhBGei7nB6DHh0x4&sid=dfefcdcb# VL-TCP-RLT  GB-138.68.175.143:2082
 vless://4b10cdaf-893c-4619-8cbd-6052bd282a02@188.245.118.6:5843?security=reality&sni=refersion.com&type=grpc&serviceName=mgrpcm&fp=chrome&pbk=Vk19B0UVrPCk4vFDYHiB_ML1j3KhY87e6dqCXMBQlR8&sid=58bcbc38eae97b5d# VL-GRPC-RLT  DE-188.245.118.6:5843
@@ -496,5 +498,3 @@ vless://2928d83a-ca75-4d52-b437-fa78c7601378@104.20.18.110:443?security=tls&sni=
 vless://9e67f15c-178f-494c-a843-f371e3b3fa5d@172.64.98.102:8080?security=none&type=ws&host=king1980.b91sptsl.workers.dev&path=%2F%3Fed%3D2048# VL-WS-NONE  NA-172.64.98.102:8080
 vless://48198295-b7ba-4b5c-8d85-085d55a6c869@104.26.3.66:443?security=tls&sni=ap.ylks.xyz&type=ws&host=ap.ylks.xyz&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-104.26.3.66:443
 vless://d342d11e-d424-4583-b36e-524ab1f0afa4@38.76.144.59:587?security=tls&sni=vless.ifx.us.kg&type=ws&host=vless.ifx.us.kg&path=%2F%3Fed%3D2560&fp=chrome# VL-WS-TLS  US-38.76.144.59:587
-vless://a89b1111-7ee2-4741-b5db-be2e32270ae8@199.232.0.1:443?security=tls&sni=FullHD.4k.ELiV2RaY.ai&type=ws&host=fullhd.4k.eliv2ray.ai&path=%2FVLESS%3Fed%3D2560&fp=edge&allowInsecure=1# VL-WS-TLS  US-199.232.0.1:443
-vless://a13df940-020c-465f-bc89-ee5279b5cd6a@141.101.121.44:443?security=tls&sni=lm.kpcloud.eu.org&type=ws&host=lm.kpcloud.eu.org&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-141.101.121.44:443
