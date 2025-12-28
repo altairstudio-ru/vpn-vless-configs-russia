@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
-# Mirror.py — POLYGLOT CLEANER
-# Понимает китайские иероглифы (俄罗斯, 德国).
-# Удаляет цепочки (->), США (美国) и Китай (中国).
-# Декодирует SS:// для глубокой проверки.
+# Mirror.py — ANTI-FAKE
+# Вырезает "маскирующиеся" под Европу иранские прокси.
 
 import os
 import shutil
 import requests
 import urllib.parse
 import base64
-import re
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.join(BASE_PATH, "githubmirror")
@@ -18,7 +15,7 @@ CLEAN_DIR = os.path.join(BASE_DIR, "clean")
 
 PROTOCOLS = ["vless", "vmess", "trojan", "ss", "hysteria", "hysteria2", "hy2", "tuic"]
 
-# 1. БЕЛЫЙ СПИСОК (Добавил китайские названия стран)
+# 1. БЕЛЫЙ СПИСОК (Что мы ищем)
 GOOD_DOMAINS = [
     ".ru", ".by", ".kz", ".su", ".rf", 
     ".de", ".nl", ".fi", ".gb", ".uk", ".fr", ".se", ".pl", ".cz", ".at",
@@ -26,32 +23,23 @@ GOOD_DOMAINS = [
 ]
 
 GOOD_TAGS = [
-    # RU / CIS
     "🇷🇺", "🇧🇾", "🇰🇿", "RUSSIA", "MOSCOW", "SPB", "KAZAKHSTAN", "BELARUS", "RU_", "RUS",
-    "俄罗斯", "莫斯科", "哈萨克斯坦", "白俄罗斯", # Китайские названия
-    # EUROPE
     "🇩🇪", "🇳🇱", "🇫🇮", "🇬🇧", "🇫🇷", "🇸🇪", "🇵🇱", "🇨🇿", "🇦🇹", "🇨🇭",
     "🇮🇹", "🇪🇸", "🇳🇴", "🇩🇰", "🇧🇪", "🇮🇪", "🇱🇺", "🇪🇪", "🇱🇻", "🇱🇹", "🇪🇺",
     "GERMANY", "DEUTSCHLAND", "NETHERLANDS", "FINLAND", "UK", "UNITED KINGDOM",
     "FRANCE", "SWEDEN", "POLAND", "CZECH", "AUSTRIA", "SWISS", "ITALY",
     "SPAIN", "NORWAY", "DENMARK", "BELGIUM", "IRELAND", "ESTONIA", "LATVIA",
     "LITHUANIA", "EUROPE", "AMSTERDAM", "FRANKFURT", "LONDON", "PARIS",
-    "FALKENSTEIN", "LIMBURG", "HELSINKI",
-    "德国", "荷兰", "芬兰", "英国", "法国", "瑞典", "波兰", "捷克", "奥地利", # Китайские EU
-    "瑞士", "意大利", "西班牙", "挪威", "丹麦", "比利时", "爱尔兰", "欧洲"
+    "FALKENSTEIN", "LIMBURG", "HELSINKI"
 ]
 
-# 2. ЧЕРНЫЙ СПИСОК (Добавил иероглифы врагов и стрелочки)
+# 2. ЧЕРНЫЙ СПИСОК (Слова-паразиты, которые палят фейки)
+# Если эти слова есть в ключе — удаляем, даже если написано "Finland"
 BAD_WORDS = [
     "IRAN", "BAX", "NAJI", "PROXYPRO", "HACKERS855", "V2RAYNG_VPN", 
     "TELEGRAM", "VPN_TELL", "FREE_V2RAY", "CONFIG_V2RAY", "SIVAND_VPN",
-    "MR_V2RAY", "V2RAY_IR", "ARVANCLOUD", "DERAK", "PARSPACK",
-    "RELAY", "POOL", "SHOP", "STORE", "PAY", "BUY", "SALE", "@",
-    # Новое:
-    "->", "=>", "TO", "中转", "回国", # Цепочки/Реле
-    "🇺🇸", "🇨🇳", "🇰🇷", "🇯🇵", "🇧🇷", # Флаги
-    "美国", "中国", "韩国", "日本", "巴西", "印度", "越南", # Иероглифы (США, Китай...)
-    "USA", "CHINA", "KOREA", "JAPAN", "BRAZIL"
+    "MR_V2RAY", "V2RAY_IR", "ARVANCLOUD", "DERAK", "PARSPACK", # Иранские хостинги
+    "RELAY", "POOL", "SHOP", "STORE", "PAY", "BUY", "SALE", "@"
 ]
 
 URLS = [
@@ -106,22 +94,6 @@ def protocol_of(line: str):
         if line.startswith(p + "://"): return p
     return None
 
-def try_decode_ss(line):
-    """Пытается декодировать SS ссылку, чтобы найти скрытый IP или мусор"""
-    try:
-        if not line.startswith("ss://"): return ""
-        # Убираем тег и ss://
-        clean = line.split("#")[0].replace("ss://", "")
-        # Если есть @, значит это не Base64 (старый формат), берем часть до @
-        if "@" in clean: return clean 
-        
-        # Base64 fix padding
-        clean += "=" * ((4 - len(clean) % 4) % 4)
-        decoded_bytes = base64.urlsafe_b64decode(clean)
-        return decoded_bytes.decode('utf-8', errors='ignore')
-    except:
-        return ""
-
 def extract_host_port_scheme(line: str):
     try:
         u = urllib.parse.urlparse(line)
@@ -130,35 +102,28 @@ def extract_host_port_scheme(line: str):
 
 def is_fake_or_garbage(line):
     """
-    True = Хороший ключ (RU/EU, без Китая, без США, без цепочек)
-    False = Мусор
+    Проверяет ключ на 'вшивость'.
+    Возвращает True, если ключ ХОРОШИЙ (прошел проверки).
+    Возвращает False, если ключ ПЛОХОЙ (нет признаков EU/RU или есть слова-паразиты).
     """
     line_upper = line.upper()
-    
-    # Декодируем внутренности SS для проверки
-    decoded_ss = ""
-    if line.startswith("ss://"):
-        decoded_ss = try_decode_ss(line).upper()
-    
-    # Собираем строку для проверки (Ссылка + Декод + Тег)
-    full_check_str = line_upper + " " + decoded_ss
-    if "#" in line:
-        full_check_str += " " + urllib.parse.unquote(line.split("#")[-1]).upper()
+    name = ""
+    if "#" in line: name = urllib.parse.unquote(line.split("#")[-1]).upper()
 
-    # 1. СНАЧАЛА ИЩЕМ ПЛОХИЕ СЛОВА (Anti-Fake & Anti-Chain)
+    # 1. СНАЧАЛА ИЩЕМ ПЛОХИЕ СЛОВА (Anti-Fake)
     for bad in BAD_WORDS:
-        if bad in full_check_str: return False 
+        if bad in line_upper: return False # Нашли "iranproxy" -> В МУСОР
 
     # 2. ТЕПЕРЬ ИЩЕМ ХОРОШИЕ ПРИЗНАКИ (Whitelist)
     is_good = False
     
-    # По тегам и содержимому
+    # По тегам
     for tag in GOOD_TAGS:
-        if tag in full_check_str:
+        if tag in name or tag in line_upper:
             is_good = True
             break
             
-    # По домену (если тегов не нашлось, но домен хороший)
+    # По домену
     if not is_good:
         host, _, _ = extract_host_port_scheme(line)
         if host:
@@ -183,7 +148,7 @@ def main():
     clean_start()
     all_keys = []
     
-    print("🚀 Старт: Сбор RU/EU. Фильтр: Китай, США, Цепочки (->)...")
+    print("🚀 Старт: Сбор ТОЛЬКО Чистых (Без фейков)...")
     
     for i, url in enumerate(URLS, 1):
         try:
@@ -236,10 +201,37 @@ def main():
         with open(os.path.join(CLEAN_DIR, f"{p}.txt"), "w", encoding="utf-8") as f:
             f.write("\n".join(items))
             
-    print(f"\n✅ ГОТОВО. Чистых ключей: {len(clean_keys)}")
+    print(f"\n✅ ГОТОВО. Чистейших ключей: {len(clean_keys)}")
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
