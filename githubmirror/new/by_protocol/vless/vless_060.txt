@@ -1,3 +1,5 @@
+vless://f9c9c1b1-5550-4e2f-b3e8-dec12b91d7c4@172.67.138.69:80?type=tcp# VL-TCP-NA  NA-172.67.138.69:80
+vless://93867bc3-273b-4fd0-bbb1-2bed051ad215@89.187.187.4:443?security=tls&sni=www.spcdn.org&type=splithttp&path=%2F%3Fed%3D2560&fp=chrome&alpn=h2%2Chttp%2F1.1# VL-SPLITHTTP-TLS  US-89.187.187.4:443
 vless://a13df940-020c-465f-bc89-ee5279b5cd6a@104.20.18.6:443?security=tls&sni=cp.ylks.xyz&type=ws&host=cp.ylks.xyz&path=%2Fblue# VL-WS-TLS  NA-104.20.18.6:443
 vless://62ae1cc9-5940-4f21-a0ed-1c13b32b5908@104.21.63.51:80?security=none&sni=de.ailicf.us.kg&type=ws&host=de.ailicf.us.kg&path=%2Fsafaf&allowInsecure=1# VL-WS-NONE  NA-104.21.63.51:80
 vless://6babb657-1524-43bb-b421-11bda27bc9de@104.25.103.137:2087?security=tls&sni=smart.titimoji-f6.fun&type=grpc# VL-GRPC-TLS  NA-104.25.103.137:2087
@@ -496,5 +498,3 @@ vless://1773441d-8b07-43c0-81e6-226cce288e13@104.18.14.166:80?security=none&type
 vless://89b3cbba-e6ac-485a-9481-976a0415eab9@172.66.44.172:443?security=tls&sni=mAHDiSErVeR-8Kq.pAGES.DEv&type=ws&host=mAhdiserVER-8Kq.pAges.DEV&path=%2FIoB67ga3CdAo0Ikm%3Fed%3D2560&fp=randomized&alpn=h2,http/1.1# VL-WS-TLS  NA-172.66.44.172:443
 vless://21695e18-1df0-452a-b1f0-bd6d312f21fb@104.21.35.215:443?security=tls&sni=chanel---selinc---selinc---selinc---selinc.cawjq.workers.dev&type=ws&host=chanel---selinc---selinc---selinc---selinc.cawjq.workers.dev&path=%2F%3Fed%3D2048&fp=randomized# VL-WS-TLS  NA-104.21.35.215:443
 vless://a13df940-020c-465f-bc89-ee5279b5cd6a@198.41.211.65:443?security=tls&sni=cj.ylks.xyz&type=ws&host=cj.ylks.xyz&path=%2Fblue# VL-WS-TLS  NA-198.41.211.65:443
-vless://2c480d4d-17d6-48d8-a1e6-bae137bb45c0@104.19.214.183:2087?security=tls&sni=g4.ferdowsi.shop&type=grpc&serviceName=Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA# VL-GRPC-TLS  NA-104.19.214.183:2087
-vless://a13df940-020c-465f-bc89-ee5279b5cd6a@108.162.195.27:443?security=tls&sni=dn.ylks.xyz&type=ws&host=dn.ylks.xyz&path=%2Fblue# VL-WS-TLS  NA-108.162.195.27:443
