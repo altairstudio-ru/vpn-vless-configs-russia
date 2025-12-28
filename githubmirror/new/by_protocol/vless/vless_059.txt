@@ -1,9 +1,3 @@
-vless://4a4c4a4d-36f4-4f84-b86f-0aa2489c6acf@104.21.75.205:80?security=none&type=httpupgrade&host=329209342.f-sub.COM.&path=%2Fd3d3LmlyYW5ob3N0LmNvbQ%3D%3D%3Fed%3D2082# VL-HTTPUPGRADE-NONE  NA-104.21.75.205:80
-vless://4a4c4a4d-36f4-4f84-b86f-0aa2489c6acf@172.67.151.138:2052?security=none&type=httpupgrade&host=92898323.namasha.COM.TR.&path=%2Fd3d3LmlyYW5ob5N0LmNvbQ%3D%3D%3Fed%3D2082# VL-HTTPUPGRADE-NONE  NA-172.67.151.138:2052
-vless://b0286bc2-e17c-4c17-b0e6-d39c93f74937@104.22.46.204:443?security=tls&sni=ap-aminoo.pages.dev&type=ws&host=ap-aminoo.pages.dev&path=/?ed%3D2048&fp=randomized&alpn=h2,http/1.1# VL-WS-TLS  NA-104.22.46.204:443
-vless://2928d83a-ca75-4d52-b437-fa78c7601378@172.67.70.227:443?security=tls&sni=freedom-1rj.pages.dev&type=ws&host=freedom-1rj.pages.dev&path=%2Ffreedom-1rj.pages.dev%2F%3Fed%3D2560&fp=randomized# VL-WS-TLS  NA-172.67.70.227:443
-vless://a13df940-020c-465f-bc89-ee5279b5cd6a@173.245.49.210:443?security=tls&sni=lc.kpcloud.eu.org&type=ws&host=lc.kpcloud.eu.org&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-173.245.49.210:443
-vless://aa6c9518-f441-43e3-9bb4-00ae82dd2614@104.21.18.210:8443?security=tls&sni=joinsho.bestchannelantimeli.ggff.net&type=ws&host=joinsho.bestchannelantimeli.ggff.net&path=/joinbadeChannel@antimeli&fp=chrome&alpn=h3,h2,http/1.1# VL-WS-TLS  NA-104.21.18.210:8443
 vless://0c28ba63-d5a8-4991-bc38-deedb794ed5e@104.21.24.116:443?security=tls&sni=xxx.66500-280b-471c-b2b8-d68b7f9960001.workers.dev&type=ws&host=xxx.66500-280b-471c-b2b8-d68b7f9960001.workers.dev&path=%2F%3Fed%3D2048&fp=chrome&alpn=h3%2Ch2# VL-WS-TLS  NA-104.21.24.116:443
 vless://a13df940-020c-465f-bc89-ee5279b5cd6a@190.93.245.129:443?security=tls&sni=ln.kpcloud.eu.org&type=ws&host=ln.kpcloud.eu.org&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-190.93.245.129:443
 vless://0c820bc5-4e67-4796-b6cb-6075685e7c75@104.17.88.212:443?security=tls&sni=xxx.66500-280b-471c-b2b8-d68b7f9960001.workers.dev&type=ws&host=xxx.66500-280b-471c-b2b8-d68b7f9960001.workers.dev&path=%2F%3Fed%3D2048&fp=chrome&alpn=h3%2Ch2# VL-WS-TLS  NA-104.17.88.212:443
@@ -498,3 +492,9 @@ vless://a13df940-020c-465f-bc89-ee5279b5cd6a@172.64.158.206:443?security=tls&sni
 vless://6babb657-1524-43bb-b421-11bda27bc9de@104.27.116.189:2087?security=tls&sni=smart.titimoji-f6.fun&type=grpc# VL-GRPC-TLS  NA-104.27.116.189:2087
 vless://48198295-b7ba-4b5c-8d85-085d55a6c869@108.162.195.207:443?security=tls&sni=ac.ylks.xyz&type=ws&host=ac.ylks.xyz&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-108.162.195.207:443
 vless://a13df940-020c-465f-bc89-ee5279b5cd6a@104.18.13.229:2087?security=tls&sni=ln.ylks.us.kg&type=ws&host=ln.ylks.us.kg&path=%2F%3Fed%3D2560# VL-WS-TLS  NA-104.18.13.229:2087
+vless://2928d83a-ca75-4d52-b437-fa78c7601378@108.162.195.205:443?security=tls&sni=freedom-1rj.pages.dev&type=ws&host=freedom-1rj.pages.dev&path=%2Ffreedom-1rj.pages.dev%2F%3Fed%3D2560# VL-WS-TLS  NA-108.162.195.205:443
+vless://fca01448-d84a-436e-9aec-3be1ebdfb350@199.34.228.65:2083?security=tls&sni=SB-1U6.PAgeS.dEv&type=ws&path=%2Furenftuu3z1kqryb%2Fmtu4ljewms4ymdmumti3%3Fed%3D2560# VL-WS-TLS  US-199.34.228.65:2083
+vless://2928d83a-ca75-4d52-b437-fa78c7601378@104.20.22.67:443?security=tls&sni=freedom-1rj.pages.dev&type=ws&host=freedom-1rj.pages.dev&path=%2Ffreedom-1rj.pages.dev%2F%3Fed%3D2560&fp=randomized# VL-WS-TLS  NA-104.20.22.67:443
+vless://7a5a4624-df8d-4955-bccc-b3fa6161411f@162.159.129.129:443?security=tls&sni=pages.dev&type=ws&host=mc0.pages.dev&path=%2FXV2ray%3Fed%3D2560# VL-WS-TLS  NA-162.159.129.129:443
+vless://48198295-b7ba-4b5c-8d85-085d55a6c869@108.162.195.223:443?security=tls&sni=aa.ylks.xyz&type=ws&host=aa.ylks.xyz&path=%2F%3Fed%3D2048# VL-WS-TLS  NA-108.162.195.223:443
+vless://a13df940-020c-465f-bc89-ee5279b5cd6a@144.22.252.124:443?security=tls&sni=cp.ylks.xyz&type=ws&host=cp.ylks.xyz&path=%2Fblue# VL-WS-TLS  BR-144.22.252.124:443
