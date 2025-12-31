@@ -288,7 +288,7 @@ vless://e5c31f13-b10a-4e9c-bfa6-09454bc5e65c@a.nl.maviks.ru:443/?type=tcp&encryp
 vless://e5c31f13-b10a-4e9c-bfa6-09454bc5e65c@a.nl.maviks.ru:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=🔒
 vless://e5c31f13-b10a-4e9c-bfa6-09454bc5e65c@a.nl.maviks.ru:443?security=reality&encryption=none&pbk=fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=🔒
 vless://e607e472-cee3-4ea7-c731-4a041a961a05@91.107.253.168:8880?mode=gun&security=none&encryption=none&type=grpc#%28%40VmessProtocol%29%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AE%D8%B1%DB%8C%D8%AF%20%D9%88%20%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20%D8%AF%D8%A7%D8%A6%D9%85%DB%8C%20%D8%AC%D9%88%DB%8C%D9%86%20%D8%B4%D9%88%F0%9F%87%A9%F0%9F%87%AA
-vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@146.19.230.209:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1#🇬🇧[openproxylist.com]
+vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@146.19.230.209:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1#🇬🇧[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@146.19.230.217:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1#🇬🇧[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@146.19.230.219:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1#GB🇬🇧
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@146.19.230.219:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1#🇬🇧[openproxylist.com]
@@ -302,8 +302,10 @@ vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@146.19.230.83:443?path=%2Fhormoz&se
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.138.164.6:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1#🇬🇧[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.218.3.39:443?note=---Telegram---@NetifyVPN---Telegram---@NetifyVPN---Telegram---@NetifyVPN---Telegram---@NetifyVPN---&path=/hormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1#🇬🇧[Telegram:NetifyVPN]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.218.3.39:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1#%F0%9F%86%94%EF%B8%8F%20%7C%20%40ConfigV2RayNG%20%F0%9F%87%AC%F0%9F%87%A7
+vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.218.3.39:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1#🇬🇧[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.218.3.39:443?path=/hormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---#[🇬🇧]t.me/Raiv2mmr
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.150:443?type=ws&encryption=none&flow=&path=%2Fhormoz&security=tls&sni=m.vk.com&allowInsecure=1&fp=chrome#RU🇷🇺
+vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.153:443?encryption=none&security=tls&insecure=1&allowInsecure=1&type=ws&path=%2Fhormoz#🇩🇪[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.154:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=m.vk.com#RU🇷🇺
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.154:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=m.vk.com#🇩🇪[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.154:443?type=ws&encryption=none&flow=&path=%2Fhormoz&security=tls&sni=m.vk.com&allowInsecure=1&fp=chrome#RU🇷🇺
@@ -312,8 +314,8 @@ vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.163:443?path=%2Fhormoz&
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.163:443?path=%2Fhormoz&security=tls&encryption=none&type=ws&sni=web.max.ru#RU🇷🇺
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.163:443?type=ws&encryption=none&flow=&path=%2Fhormoz&security=tls&sni=web.max.ru&allowInsecure=1#RU🇷🇺
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.53:443?path=%2Fhormoz&security=tls&encryption=none&type=ws&sni=m.vk.com#RU🇷🇺
+vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.56:443?path=%2Fhormoz&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0#🇩🇪[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.56:443?path=%2Fhormoz&security=tls&encryption=none&type=ws#%F0%9F%87%A9%F0%9F%87%AA%40FreakConfig
-vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.56:443?path=%2Fhormoz&security=tls&encryption=none&type=ws#🇩🇪[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.56:443?path=/hormoz&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0#🇩🇪@FreakConfig
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.56:443?path=/hormoz&security=tls&encryption=none&type=ws#🇩🇪@FreakConfig
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.58:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%A9%F0%9F%87%AA
@@ -328,7 +330,7 @@ vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.67:443?path=/hormoz&sec
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.67:443?path=/hormoz&security=tls&encryption=none&type=ws&sni=web.max.ru#DE🇩🇪
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.67:443?path=/hormoz&security=tls&encryption=none&type=ws&sni=web.max.ru#🇩🇪@FreakConfig
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.67:443?type=ws&encryption=none&flow=&path=%2Fhormoz&security=tls&sni=web.max.ru&allowInsecure=1#RU🇷🇺
-vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.95:443?path=%2Fhormoz&security=tls&encryption=none&type=ws&sni=web.max.ru#🇩🇪[openproxylist.com]
+vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.95:443?encryption=none&security=tls&sni=web.max.ru&allowInsecure=true&type=ws&path=/hormoz&packetEncoding=xudp#🇩🇪[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.99:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%A9%F0%9F%87%AA
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.99:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1#🇩🇪[openproxylist.com]
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@45.140.167.226:443?path=%2Fhormoz&security=tls&encryption=none&insecure=1&type=ws&allowInsecure=1#🇬🇧[openproxylist.com]
@@ -496,5 +498,3 @@ vless://ee122f13-9b54-49b6-abc5-aa47b464fdb3@norman.ns.cloudflare.com:443?path=/
 vless://ee122f13-9b54-49b6-abc5-aa47b464fdb3@norman.ns.cloudflare.com:443?path=/yhowcws&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=azizoarjmand.info#🇬🇧@FreakConfig
 vless://ee2bb495-2632-445b-b1f8-3c476a50b78b@104.16.185.66:443/?type=ws&encryption=none&path=%2F&security=tls&sni=dl1-de-cdn.easy-upload.org#Channel%20id%3A%20%40ShadowProxy66%F0%9F%87%A9%F0%9F%87%AA
 vless://ee2bb495-2632-445b-b1f8-3c476a50b78b@104.17.163.219:443/?type=ws&encryption=none&path=%2F&security=tls&sni=dl1-de-cdn.easy-upload.org#Channel%20id%3A%20%40ShadowProxy66%F0%9F%87%A9%F0%9F%87%AA
-vless://ee2bb495-2632-445b-b1f8-3c476a50b78b@104.18.102.129:443/?type=ws&encryption=none&path=%2F&security=tls&sni=dl1-de-cdn.easy-upload.org#Channel%20id%3A%20%40ShadowProxy66%F0%9F%87%A9%F0%9F%87%AA
-vless://ee2bb495-2632-445b-b1f8-3c476a50b78b@104.18.175.22:443/?type=ws&encryption=none&path=%2F&security=tls&sni=dl1-de-cdn.easy-upload.org#Channel%20id%3A%20%40ShadowProxy66%F0%9F%87%A9%F0%9F%87%AA
