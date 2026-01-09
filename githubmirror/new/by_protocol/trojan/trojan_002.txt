@@ -211,10 +211,10 @@ trojan://humanity@www.calmlunch.com:443?path=%2Fassignment&amp;security=tls&amp;
 trojan://telegram-id-privatevpns@13.39.11.161:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S104)
 trojan://telegram-id-directvpn@35.180.217.26:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#OurChannel
 trojan://telegram-id-directvpn@63.176.184.249:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#OurChannel
-trojan://xtA6WF92Itmhm9jfvXUH1MDVL@free-de-3.undef.network:443?type=raw&headerType=none&security=tls&sni=free-de-3.undef.network#[🇩🇪] [tr-tl-ra] [260109-165227.698]
-trojan://zL7CpPYxhvFtYqm2yAbHrw@137.74.41.156:7494?type=raw&headerType=none&security=none#[🇫🇷] [tr-no-ra] [260109-165227.804]
-trojan://humanity@www.calmlunch.com:443?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com#[🇫🇷] [tr-tl-ws] [260109-165226.895]
-trojan://zWFjJENcljZm@usa.visa.com:443?type=ws&path=%2F%3Fed%3D2560&security=tls&fp=chrome&sni=vahidqaz-7o61u7.vahidqaz.workers.dev#[🇳🇱] [tr-tl-ws] [260109-165227.855]
+trojan://zWFjJENcljZm@usa.visa.com:443?type=ws&path=%2F%3Fed%3D2560&security=tls&fp=chrome&sni=vahidqaz-7o61u7.vahidqaz.workers.dev#[🇨🇭] [tr-tl-ws] [260109-192018.409]
+trojan://xtA6WF92Itmhm9jfvXUH1MDVL@free-de-3.undef.network:443?type=raw&headerType=none&security=tls&sni=free-de-3.undef.network#[🇩🇪] [tr-tl-ra] [260109-192018.254]
+trojan://zL7CpPYxhvFtYqm2yAbHrw@137.74.41.156:7494?type=raw&headerType=none&security=none#[🇫🇷] [tr-no-ra] [260109-192018.361]
+trojan://humanity@www.calmlunch.com:443?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com#[🇫🇷] [tr-tl-ws] [260109-192017.434]
 trojan://3747000103274291200@195.133.93.135:443/?type=tcp&security=tls&sni=epic-weasel.treefrog761.one#%F0%9F%87%A8%F0%9F%87%BFCZ%28AzadNet.t.me%29
 trojan://3r372@91.195.240.94:443/?type=tcp&security=tls&sni=tj786.37927.online&allowInsecure=1#%F0%9F%87%A9%F0%9F%87%AADE%28AzadNet.t.me%29%20%283%29
 trojan://6e1b9a65-884f-3aa9-9469-bf6ec0f08610@37.114.62.218:443/?type=tcp&security=tls&sni=45.32.28.232&allowInsecure=1&fp=chrome#%F0%9F%87%A9%F0%9F%87%AADE%28AzadNet.t.me%29%20%284%29
@@ -278,5 +278,6 @@ trojan://telegram-id-directvpn@13.39.204.51:22223?security=tls&alpn=http/1.1&hea
 trojan://telegram-id-privatevpns@13.39.204.51:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S104)🇨🇵t.me/PrivateVPNs
 trojan://telegram-id-directvpn@98.80.160.139:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
 trojan://oUFBC3Vs2rYmN8_bR-P7quoL@45.129.3.220:10668?security=tls&insecure=1&allowInsecure=1&type=tcp&headerType=none#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%5B%2ACIDR%5D
+trojan://oUFBC3Vs2rYmN8_bR-P7quoL@45.129.3.220:10668?security=tls&allowInsecure=true#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%5B%2ACIDR%5D
 trojan://ZblhWr0mqMakCPg.N@212.193.18.144:36158?security=tls&sni=api.avito.ru&allowInsecure=true&fp=chrome#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%5BSNI-RU%5D%20api.avito.ru
 trojan://cTv.9PDdCt-wybBrG1qlxI5UJuaEj@167.17.185.169:10889?security=tls&insecure=1&headerType=&type=tcp&allowInsecure=1&sni=ya.ru#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%5BSNI-RU%5D%20ya.ru
