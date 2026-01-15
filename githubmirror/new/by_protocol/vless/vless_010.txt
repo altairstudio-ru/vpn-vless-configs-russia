@@ -1,7 +1,3 @@
-vless://704145ac-10c0-4cd9-b945-fd0e4e6ddc22@tunnyl.ru:443?security=reality&encryption=none&pbk=llUN5iiAQwwKwiAp7zCwfU8wNz7F4lg__e9Qdv_gkWs&headerType=none&fp=random&spx=%2F&type=tcp&sni=google.com&sid=0f1d6a#4Sarina-6315
-vless://739b8e9b-f1da-449a-8bfe-bf7b102b7751@iran.zanbor.de:443?type=tcp&encryption=none&security=reality&pbk=arLM5x4jH1TT05yUjirGNCSDK9pSscqHQWg3rqdKA3Y&fp=firefox&sni=bitcommand.com&sid=b1459712&spx=%2F#4Sarina-6341
-vless://74ea5905-0f26-4261-986c-0717ed34815d@95.217.163.167:12344?security=tls&sni=dl.magnataur.uk&allowInsecure=1&type=grpc&encryption=none#4Sarina-6354
-vless://74ea5905-0f26-4261-986c-0717ed34815d@dl.magnataur.uk:12344?security=tls&type=grpc&encryption=none#4Sarina-6355
 vless://75035d9c-d1df-4169-86d8-b65c1f697db4@104.21.3.52:443?security=tls&sni=Rus.Melov2ray.Shop&alpn=h2,http/1.1&fp=chrome&type=grpc&serviceName=@melov2ray&encryption=none#4Sarina-6356
 vless://75035d9c-d1df-4169-86d8-b65c1f697db4@172.67.130.66:443?security=tls&sni=Rus.Melov2ray.Shop&alpn=h2,http/1.1&fp=chrome&type=grpc&serviceName=@melov2ray&encryption=none#4Sarina-6357
 vless://75035d9c-d1df-4169-86d8-b65c1f697db4@speedtest.org:443?security=tls&sni=Rus.Melov2ray.Shop&alpn=h2,http/1.1&fp=chrome&type=grpc&serviceName=@melov2ray&encryption=none#4Sarina-6358
@@ -498,3 +494,7 @@ vless://5e182110-8d13-4aa4-abf6-f3081628e1d0@Api-saroNet.zirAkoMamLe.Com:2082?pa
 vless://cb522244-ff63-4883-ae1f-87d883fb2da7@api-saronet.sarhadpirani.ir:2052?path=%2Fapi%2Fstatus%2F%3Fed%3D2560&security=&encryption=none&host=cLoUd.zIrAkOmAmLe.CoM&type=httpupgrade#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%AC%F0%9F%87%A7
 vless://51a412a2-e8a4-44be-b56d-5940ecd61608@Api.zirakomamle.com:2052?path=%2Fapi%2Fstatus%2F%3Fed%3D2048&security=&encryption=none&host=swt.zirakomamle.coM&type=httpupgrade#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%AC%F0%9F%87%A7
 vless://26e8aa9e-bac9-4e93-9ecd-60888a08ce72@api-saronet.sarhadpirani.ir:2052?path=%2Fspeedtest.net%2Fnode-game.ir%3Fed%3D2048&security=&encryption=none&host=aCrE-cAbLe-sKiP.nOdE-gAmE.iR&type=httpupgrade#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%AC%F0%9F%87%A7
+vless://a8ce0aca-a11a-4105-ba03-f148c449e358@25.129.199.148:2082?path=%2Fapi%2Fstatus&security=&encryption=none&host=clOuD.zIrAkomAmle.coM&type=httpupgrade#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%AC%F0%9F%87%A7
+vless://c0150632-5677-4b96-aec8-cd2bbb7696a5@25.129.197.138:2052?path=%2Fparspack.com%2Fnode-game.ir%3Fed%3D2048&security=&encryption=none&host=caNAdA.NoDe-gAme.ir&type=httpupgrade#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%AC%F0%9F%87%A7
+vless://cd4137e5-fe40-4a3c-a23f-cd7892505a38@api-saronet.sarhadpirani.ir:2082?path=%2Fspeedtest.net%2Fzirakomamle.com%3Fed%3D2048&security=&encryption=none&host=swt.zirakomamle.com&type=ws#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%AC%F0%9F%87%A7
+vless://fc5f77ad-f5f8-4392-8177-90fac9fed22b@25.129.199.148:2053?path=%2Fspeedtest.net%2FzIrAkOmAmLe.CoM%3Fed%3D2048&security=tls&alpn=http%2F1.1&encryption=none&insecure=1&host=uSa.zIrAkOmAmLe.CoM&fp=chrome&type=ws&allowInsecure=1#Channel%20id%3A%20%40ShadowProxy66%20%F0%9F%87%AC%F0%9F%87%A7
