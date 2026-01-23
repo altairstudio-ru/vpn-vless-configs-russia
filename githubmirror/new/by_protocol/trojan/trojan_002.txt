@@ -268,10 +268,11 @@ trojan://humanity@www.calmlunch.com:443?path=%2Fassignment&amp;security=tls&amp;
 trojan://telegram-id-privatevpns@13.39.11.161:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S104)
 trojan://telegram-id-directvpn@35.180.217.26:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#OurChannel
 trojan://telegram-id-directvpn@63.176.184.249:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#OurChannel
-trojan://TurbooServer@cdn.turbooserver.com:80?type=ws&host=jone-turboo-server.com&path=%2Fed%3D25&security=none#[🇩🇪] [tr-no-ws] [260123-192250.626]
-trojan://fe793ec6-b7a9-4f30-b623-d3c9ca6eb37c@ssr-de-152.rosena.ggff.net:19233?type=raw&headerType=none&security=tls&alpn=http%2F1.1&sni=ssr-de-152.rosena.ggff.net#[🇩🇪] [tr-tl-ra] [260123-192254.513]
-trojan://humanity@chatgpt.com:443?type=ws&host=www.gossipglove.com&path=%2Fassignment&security=tls&fp=chrome&sni=www.gossipglove.com#[🇫🇷] [tr-tl-ws] [260123-192254.631]
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?type=raw&headerType=none&security=tls&sni=www.semanticstaplegun.click#[🇳🇴] [tr-tl-ra] [260123-192255.596]
+trojan://IXoJvZ7SJb@de.scpnb.top:44792?type=grpc&security=reality&fp=chrome&pbk=HuKTPB5e7tzLiGoYPhPRFgHE_1VJNaroU-TTRA9xAyI&sni=cloudflare.com&sid=95#[🇩🇪] [tr-re-gr] [260123-223057.021]
+trojan://fe793ec6-b7a9-4f30-b623-d3c9ca6eb37c@ssr-de-152.rosena.ggff.net:19233?type=raw&headerType=none&security=tls&alpn=http%2F1.1&sni=ssr-de-152.rosena.ggff.net#[🇩🇪] [tr-tl-ra] [260123-223101.765]
+trojan://TurbooServer@cdn.turbooserver.com:80?type=ws&host=turboo-server.online&path=%2Fed&security=none#[🇫🇮] [tr-no-ws] [260123-223057.694]
+trojan://humanity@chatgpt.com:443?type=ws&host=www.gossipglove.com&path=%2Fassignment&security=tls&fp=chrome&sni=www.gossipglove.com#[🇫🇷] [tr-tl-ws] [260123-223101.887]
+trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?type=raw&headerType=none&security=tls&sni=www.semanticstaplegun.click#[🇳🇴] [tr-tl-ra] [260123-223102.877]
 trojan://3747000103274291200@195.133.93.135:443/?type=tcp&security=tls&sni=epic-weasel.treefrog761.one#%F0%9F%87%A8%F0%9F%87%BFCZ%28AzadNet.t.me%29
 trojan://3r372@91.195.240.94:443/?type=tcp&security=tls&sni=tj786.37927.online&allowInsecure=1#%F0%9F%87%A9%F0%9F%87%AADE%28AzadNet.t.me%29%20%283%29
 trojan://6e1b9a65-884f-3aa9-9469-bf6ec0f08610@37.114.62.218:443/?type=tcp&security=tls&sni=45.32.28.232&allowInsecure=1&fp=chrome#%F0%9F%87%A9%F0%9F%87%AADE%28AzadNet.t.me%29%20%284%29
@@ -343,3 +344,7 @@ trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&sni=www.semant
 trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&sni=www.semanticstaplegun.click&path=%2f#%f0%9f%87%b3%f0%9f%87%b4%20NO%202
 trojan://telegram-id-directvpn@52.59.174.18:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#OurChannel : @DirectVPN
 trojan://telegram-id-privatevpns@52.59.174.18:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S102)🇩🇪t.me/PrivateVPNs
+trojan://telegram-id-privatevpns@52.59.174.18:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @vmessorg
+trojan://telegram-id-directvpn@52.59.174.18:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @vmessorg
+trojan://telegram-id-directvpn@15.236.111.194:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#OurChannel : @DirectVPN
+trojan://telegram-id-privatevpns@15.236.111.194:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S103)🇨🇵t.me/PrivateVPNs
