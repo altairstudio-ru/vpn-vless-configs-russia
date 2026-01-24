@@ -345,3 +345,7 @@ trojan://telegram-id-privatevpns@63.35.121.108:22222?allowInsecure=0&sni=trojan.
 trojan://telegram-id-directvpn@3.123.120.25:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#OurChannel : @DirectVPN
 trojan://telegram-id-privatevpns@3.123.120.25:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S101)🇩🇪t.me/PrivateVPNs
 trojan://telegram-id-privatevpns@3.120.114.36:22222?allowInsecure=0&sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
+trojan://nodes-b211f28a@node-fr-1.v2sv.top:2083?type=tcp&headerType=none&security=tls&sni=node-fr-1.v2sv.top#🇫🇷[openproxylist.com] trojan-FR```
+trojan://telegram-id-directvpn@13.39.197.201:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#OurChannel : @DirectVPN
+trojan://telegram-id-privatevpns@13.39.197.201:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S103)🇨🇵t.me/PrivateVPNs
+trojan://TurbooServer@cdn1.turbooserver.com:80?path=/ed&%3Bsecurity=none&%3Bhost=turboo-server.online&%3Btype=ws#🇫🇮[openproxylist.com] trojan-FI```
