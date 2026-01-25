@@ -1,5 +1,3 @@
-vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk4.g2ray.com:443?encryption=none&flow=xtls-rprx-direct&security=xtls&type=tcp&headerType=none
-vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk4.g2ray.com:443?encryption=none&security=tls&type=tcp&headerType=none
 vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk4.g2ray.com:443?encryption=none&security=tls&type=ws&path=🔒
 vless://2c118006-a825-416a-9622-740769ca1a11@france.specialmajor2.com:5489?encryption=none&flow=&headerType=http&host=speedtest.net&type=tcp
 vless://2c118006-a825-416a-9622-740769ca1a11@france.specialmajor2.com:5489?encryption=none&flow=&headerType=http&host=speedtest.net&type=tcp#france.specialmajor2.com:5489%20(1)
@@ -498,3 +496,5 @@ vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@172.67.153.156:8443/?type=ws&encryp
 vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@172.67.153.156:8443?path=%2F57ba2ab1&security=tls&encryption=none&host=ovhwuxian.pai50288.uk&type=ws&sni=ovhwuxian.pai50288.uk#Channel%20id%3A%20%40ShadowProxy66%F0%9F%87%AB%F0%9F%87%B7
 vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@45.131.209.130:8443?type=ws&encryption=none&flow=&host=ovhwuxian.pai50288.uk&path=%2F57ba2ab1&security=tls&sni=ovhwuxian.pai50288.uk&allowInsecure=1#RELAY🚩
 vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@chatgpt.com:8443?path=%2F57ba2ab1&security=tls&encryption=none&insecure=0&host=ovhwuxian.pai50288.uk&fp=chrome&type=ws&allowInsecure=0&sni=ovhwuxian.pai50288.uk#RELAY🚩
+vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@ovhwuxian.pai50288.uk:8443/?type=ws&encryption=none&flow=&host=ovhwuxian.pai50288.uk&path=🔒
+vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@ovhwuxian.pai50288.uk:8443/?type=ws&encryption=none&host=ovhwuxian.pai50288.uk&path=%2F57ba2ab1&security=tls&sni=ovhwuxian.pai50288.uk&fp=chrome#%F0%9F%8D%B032%40oneclickvpnkeys
