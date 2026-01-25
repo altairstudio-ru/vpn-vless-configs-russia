@@ -1,3 +1,6 @@
+vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk4.g2ray.com:443?encryption=none&security=tls&type=ws&path=%2F4acf355e2d33%2F#WS_TLS-N-England
+vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vlbe.g2ray.com:443?encryption=none&flow=xtls-rprx-direct&security=xtls&type=tcp&headerType=none#XTLS-N-Belgium
+vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk4.g2ray.com:443?encryption=none&flow=xtls-rprx-direct&security=xtls&type=tcp&headerType=none#XTLS-N-England
 vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk4.g2ray.com:443?encryption=none&security=tls&type=tcp&headerType=none#TLS-N-England
 vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk.g2ray.com:443?encryption=none&security=tls&type=tcp&headerType=none#TLS-N-England
 vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vluk.g2ray.com:443?encryption=none&security=tls&type=ws&path=%2F4acf355e2d33%2F#WS_TLS-N-England
@@ -495,6 +498,3 @@ vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@15.236.72.233:22224?type=ws&securit
 vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@15.236.185.25:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk#@Vip_Security join us - 78
 vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@15.236.111.194:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk#@Vip_Security join us - 77
 vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@15.224.7.85:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk#@Vip_Security join us - 76
-vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@15.188.182.161:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk#@Vip_Security join us - 75
-vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@13.39.204.51:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk#@Vip_Security join us - 74
-vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@13.39.197.201:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk#@Vip_Security join us - 73
