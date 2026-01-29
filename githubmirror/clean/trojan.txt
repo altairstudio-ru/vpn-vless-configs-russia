@@ -39,8 +39,6 @@ trojan://telegram-id-directvpn@35.181.70.172:22223?security=tls&amp;alpn=http/1.
 trojan://telegram-id-directvpn@13.36.112.231:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#OurChannel
 trojan://telegram-id-directvpn@52.28.25.58:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#OurChannel
 trojan://FreakConfig@77.232.142.141:42598?security=none&amp;headerType=&amp;type=tcp#Trojan-🇩🇪@FreakConfig
-trojan://telegram-id-directvpn@35.176.142.159:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
-trojan://telegram-id-directvpn@13.60.165.212:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
 trojan://telegram-id-privatevpns@15.188.112.175:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
 trojan://telegram-id-directvpn@18.224.186.175:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
 trojan://telegram-id-privatevpns@63.35.121.108:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
@@ -105,9 +103,7 @@ trojan://ba74833c-8c0f-4dcd-8cbc-13e3c32d3765@185.236.233.111:2053?sni=ftp.debia
 trojan://telegram-id-directvpn@13.39.209.28:22222?allowInsecure=1&amp;sni=trojan.burgerip.co.uk#法国-3.42MB/s
 trojan://humanity@208.103.161.110:443?path=%2Fassignment&security=tls&insecure=0&host=www.creationlong.org&type=ws&allowInsecure=0&sni=www.creationlong.org#🇵🇱[openproxylist.com] trojan-PL
 trojan://humanity@172.64.152.23:443?path=/assignment&amp%3Bsecurity=tls&amp%3Bhost=www.multiplydose.com&amp%3Bfp=chrome&amp%3Btype=ws&amp%3Bsni=www.multiplydose.com#🇳🇱[openproxylist.com] trojan-NL
-trojan://humanity@188.114.96.3:443?path=%2Fassignment&amp;security=tls&amp;insecure=0&amp;host=www.gossipglove.com&amp;fp=chrome&amp;type=ws&amp;allowInsecure=0&amp;sni=www.gossipglove.com#🇫🇷[openproxylist.com] trojan-FR
-trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.158.138:20994?security=tls&amp;insecure=1&amp;headerType=none&amp;type=tcp&amp;allowInsecure=1&amp;sni=ads.x5.ru#🇩🇪[openproxylist.com] trojan-DE
-trojan://humanity@www.calmlunch.com:443?path=/assignment&security=tls&insecure=1&host=www.calmlunch.com&type=ws&allowInsecure=1&sni=www.calmlunch.com#🇫🇷[openproxylist.com] trojan-FR
+trojan://humanity@chatgpt.com:443?path=%2Fassignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#🇫🇷[openproxylist.com] trojan-FR
 trojan://ZblhWr0mqMakCPg.N@212.193.18.144:36158?sni=ya.ru#%F0%9F%87%B7%F0%9F%87%BARU%E4%BF%84%E7%BD%97%E6%96%AF
 trojan://a5inYFE=JGV89+hjxIqgDp1tcWBd6@80.173.230.196:26279?#%F0%9F%87%AA%F0%9F%87%B8ES%E8%A5%BF%E7%8F%AD%E7%89%99
 trojan://humanity@c.panelniazi.sbs:443?sni=www.gossipglove.com#%F0%9F%87%AC%F0%9F%87%A7GB%E8%8B%B1%E5%9B%BD2
@@ -267,6 +263,8 @@ trojan://TurbooServer@cdn1.turbooserver.com:80?security=tls&type=#%F0%9F%87%AB%F
 trojan://humanity@104.18.32.47:443?fp=chrome&host=www.multiplydose.com&path=%2Fassignment&security=tls&type=ws#%F0%9F%87%B3%F0%9F%87%B1%5Bopenproxylist.com%5D%20trojan-NL
 trojan://humanity@www.gossipglove.com:443?fp=chrome&path=%2Fassignment&security=tls&type=ws#%F0%9F%87%AB%F0%9F%87%B7%5Bopenproxylist.com%5D%20trojan-FR
 trojan://TurbooServer@cdn.turbooserver.com:80?host=jone-turboo-server.com&path=%2Fed%3D25&type=ws#%F0%9F%87%A9%F0%9F%87%AA%5Bopenproxylist.com%5D%20trojan-DE
+trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.158.138:20994?security=tls&type=#%F0%9F%87%A9%F0%9F%87%AA%5Bopenproxylist.com%5D%20trojan-DE%20(1)
+trojan://humanity@www.calmlunch.com:443?host=www.calmlunch.com&path=%2Fassignment&security=tls&type=ws#%F0%9F%87%AB%F0%9F%87%B7%5Bopenproxylist.com%5D%20trojan-FR%20(1)
 trojan://RPyW62_b9aH.ztJKeArou@83.143.87.9:18581?security=tls&type=#%F0%9F%87%B3%F0%9F%87%B4%20%E6%8C%AA%E5%A8%81%20V2CROSS.COM
 trojan://nodes-b211f28a@node-tr-1.v2sv.top:2083?security=tls&type=#%F0%9F%87%A9%F0%9F%87%AA@JKVPN
 trojan://shefelnak@88.150.137.177:443?security=tls&type=#%F0%9F%87%AC%F0%9F%87%A7GB-88.150.137.177-0028
