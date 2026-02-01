@@ -1,5 +1,3 @@
-vless://33a57acf-163f-4cdd-8b23-cc52a58f2362@xhero.kharabetam.de:2053?path=%2FIfUknowThenUKnow&security=tls&encryption=none&host=mrx.xher0.de&type=ws&sni=mrx.xher0.de#VB%2016%20join%20%40Outline_Vpn
-vless://c7f067ad-044c-407e-b1d2-711902903ac0@nider-t.sbrf-cdn342.ru:443?security=reality&encryption=none&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=max.ru&sid=111111#TE%204%20%40Outline_Vpn
 vless://abfee984-e98c-4081-bfcf-71446001d63c@80.253.249.4:2020?security=reality&encryption=none&pbk=nE2hZn0u63xEpxsPPy-Ey-X7GF8ukrHOMnACtetllSg&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=acff98#AL%2032%20%40Outline_Vpn
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@638957009637251670.london-blkaft-aaag.info:8880?mode=gun&security=none&encryption=none&type=grpc#@V2rayNG3
 vless://f31f5fe0-0a42-436a-be94-437330801388@us.nitroo-tech.ru:443?security=reality&encryption=none&pbk=aHaFXlvmkeCV60wfe60DD9w00WE1euQfH6jtDq5iYkI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=mirror.yandex.ru&sid=7e44612b079459#@V2rayNG3
@@ -498,3 +496,5 @@ vless://111db1d5-0c3d-43c3-8c05-de4c3bd77604@92.222.217.16:80?encryption=none&se
 vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vlgr2.g2ray.com:443?encryption=none&security=tls&type=ws&path=%2F21c13feb6ae4%2F#WS_TLS-N-Germany2
 vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vlgr1.g2ray.com:443?encryption=none&flow=xtls-rprx-direct&security=xtls&type=tcp&headerType=none#XTLS-N-Germany1
 vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vlgr2.g2ray.com:443?encryption=none&flow=xtls-rprx-direct&security=xtls&type=tcp&headerType=none#XTLS-N-Germany2
+vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vlgr.g2ray.com:443?encryption=none&security=tls&type=tcp&headerType=none#TLS-N-Germany
+vless://2bd0516b-d354-4b73-a198-9d826ab478ae@vlfr.g2ray.com:443?encryption=none&security=tls&type=ws&path=%2Fbcad%2F#WS_TLS-N-France
