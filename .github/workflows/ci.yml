@@ -1,12 +1,16 @@
-name: Auto Mirror (every 15 minutes)
+name: Auto Mirror (every 30 minutes)
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write    # дать GITHUB_TOKEN право коммитить
+
+concurrency:
+  group: auto-mirror
+  cancel-in-progress: true
 
 jobs:
   update:
@@ -46,6 +50,3 @@ jobs:
           git add githubmirror
           git commit -m "Update githubmirror $(date +'%Y-%m-%d %H:%M')" || echo "Nothing to commit"
           git push
-
-
-
