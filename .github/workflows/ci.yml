@@ -14,39 +14,5 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
+# ... (остальное без изменений)
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}   # стандартный токен
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install requests==2.32.5 PyGithub==2.8.1
-
-      - name: Run mirror script
-        env:
-          MY_TOKEN: ${{ secrets.MY_TOKEN }}
-        run: |
-          python mirror.py
-
-      - name: Run RU-SNI filter
-        run: |
-          python filter_ru_sni.py
-
-      - name: Commit githubmirror folder
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add githubmirror
-          git commit -m "Update githubmirror $(date +'%Y-%m-%d %H:%M')" || echo "Nothing to commit"
-          git push
