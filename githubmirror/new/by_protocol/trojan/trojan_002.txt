@@ -321,3 +321,5 @@ trojan://trojan@109.234.211.66:8443?security=tls&sni=store.timimi.dpdns.org&allo
 trojan://76yTlnTIsjCTlmqnUJ5Tzc1rM@hl-freedom-0.undef.network:443?security=tls&sni=hl-freedom-0.undef.network&type=ws&host=hl-freedom-0.undef.network&path=%2ff2fc2a1f#%f0%9f%87%ac%f0%9f%87%a7%20GB%201
 trojan://telegram-id-directvpn@63.181.75.67:22223?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#[🏁]t.me/ConfigsHub`
 trojan://telegram-id-privatevpns@63.181.75.67:22222?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#[🏁]t.me/ConfigsHub`
+trojan://telegram-id-directvpn@13.39.127.100:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#OurChannel : @DirectVPN
+trojan://telegram-id-privatevpns@13.39.127.100:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S103)🇨🇵t.me/PrivateVPNs
