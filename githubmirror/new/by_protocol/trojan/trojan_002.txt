@@ -1,9 +1,8 @@
-trojan://your_password@15.236.64.14:443?security=tls&sni=aws-fr-paris-1.f1rocketnode.com&type=tcp#4Kian-4730
-trojan://your_password@188.114.99.0:443?security=tls&sni=aws-ge-frankfurt-1.f1cflinea.com&allowInsecure=1&type=ws&path=/f1rocket&host=aws-ge-frankfurt-1.f1cflinea.com#4Kian-4736
-trojan://your_password@52.56.183.187:443?security=tls&sni=aws-uk-london-1.f1rocketnode.com&type=tcp#4Kian-4742
-trojan://your_password@aws-uk-london-1.f1cflinea.com:443?security=tls&sni=aws-uk-london-1.f1cflinea.com&fp=chrome&type=ws&path=/f1rocket&host=aws-uk-london-1.f1cflinea.com#4Kian-4752
-trojan://your_password@aws-uk-london-1.f1cflineb.com:443?security=tls&sni=aws-uk-london-1.f1cflineb.com&fp=chrome&type=ws&path=/f1rocket&host=aws-uk-london-1.f1cflineb.com#4Kian-4753
-trojan://容解析错误trojan://T9BpZIVMNv@v3.dabache.top:8443?security=tls&sni=sweden.vmaxpanel.com&type=ws&path=%2Famd&Host=sweden.vmaxpanel.com#4Kian-4758
+trojan://your_password@188.114.99.0:443?security=tls&sni=aws-ge-frankfurt-1.f1cflinea.com&allowInsecure=1&type=ws&path=/f1rocket&host=aws-ge-frankfurt-1.f1cflinea.com#4Mohsen-4724
+trojan://your_password@52.56.183.187:443?security=tls&sni=aws-uk-london-1.f1rocketnode.com&type=tcp#4Mohsen-4730
+trojan://your_password@aws-uk-london-1.f1cflinea.com:443?security=tls&sni=aws-uk-london-1.f1cflinea.com&fp=chrome&type=ws&path=/f1rocket&host=aws-uk-london-1.f1cflinea.com#4Mohsen-4740
+trojan://your_password@aws-uk-london-1.f1cflineb.com:443?security=tls&sni=aws-uk-london-1.f1cflineb.com&fp=chrome&type=ws&path=/f1rocket&host=aws-uk-london-1.f1cflineb.com#4Mohsen-4741
+trojan://容解析错误trojan://T9BpZIVMNv@v3.dabache.top:8443?security=tls&sni=sweden.vmaxpanel.com&type=ws&path=%2Famd&Host=sweden.vmaxpanel.com#4Mohsen-4746
 trojan://telegram-id-privatevpns@51.44.43.148:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Paris🅿️ping:79.86ms
 trojan://02948bde80594712b974368035f294dd@88.214.24.235:9443?security=reality&pbk=au0aQ5QVdLNbzMShbL9Anhi5hOPXMNJVBhbkuFP7Sk0&headerType=none&fp=random&type=tcp&sni=apple.com&sid=aabbccdd#👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Paris🅿️ping:30.93ms
 trojan://T9BpZIVMNv@v1.dabache.top:8443?path=%2Famd&security=tls&host=sweden.vmaxpanel.com&type=ws&sni=sweden.vmaxpanel.com#@meliproxyy
@@ -335,3 +334,4 @@ trojan://7LBbob9IutFObLxLf9Svc1HaV@45.89.111.142:443?sni=hl-freedom-1.undef.netw
 trojan://7LBbob9IutFObLxLf9Svc1HaV@45.89.111.142:443?security=tls&sni=hl-freedom-1.undef.network&path=%2f#%f0%9f%87%ac%f0%9f%87%a7%20GB%204
 trojan://telegram-id-directvpn@51.44.43.148:22223?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#[🏁]t.me/ConfigsHub`
 trojan://telegram-id-privatevpns@51.44.43.148:22222?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#[🏁]t.me/ConfigsHub`
+trojan://telegram-id-privatevpns@13.39.63.241:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#🇫🇷[openproxylist.com] trojan-FR```
