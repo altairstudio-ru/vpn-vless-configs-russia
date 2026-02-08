@@ -1,3 +1,4 @@
+trojan://your_password@188.114.99.0:443?security=tls&sni=aws-ge-frankfurt-1.f1cflinea.com&allowInsecure=1&type=ws&path=/f1rocket&host=aws-ge-frankfurt-1.f1cflinea.com#4Sarina-4762
 trojan://your_password@52.56.183.187:443?security=tls&sni=aws-uk-london-1.f1rocketnode.com&type=tcp#4Sarina-4768
 trojan://your_password@aws-uk-london-1.f1cflinea.com:443?security=tls&sni=aws-uk-london-1.f1cflinea.com&fp=chrome&type=ws&path=/f1rocket&host=aws-uk-london-1.f1cflinea.com#4Sarina-4778
 trojan://your_password@aws-uk-london-1.f1cflineb.com:443?security=tls&sni=aws-uk-london-1.f1cflineb.com&fp=chrome&type=ws&path=/f1rocket&host=aws-uk-london-1.f1cflineb.com#4Sarina-4779
@@ -362,3 +363,8 @@ trojan://T9BpZIVMNv@v3.dabache.top:8443?allowInsecure=0&sni=sweden.vmaxpanel.com
 trojan://T9BpZIVMNv@vip1.kaixincloud.top:8443?allowInsecure=0&sni=sweden.vmaxpanel.com#🔷🆔@v2ray_configs_pool🔷
 trojan://T9BpZIVMNv@v1.dabache.top:8443?allowInsecure=0&sni=sweden.vmaxpanel.com#🔷🆔@v2ray_configs_pool🔷
 trojan://T9BpZIVMNv@vip3.kaixincloud.top:8443?allowInsecure=0&sni=sweden.vmaxpanel.com#🔷🆔@v2ray_configs_pool🔷```
+trojan://telegram-id-directvpn@63.181.75.67:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#OurChannel : @DirectVPN
+trojan://telegram-id-privatevpns@63.181.75.67:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S102)🇩🇪t.me/PrivateVPNs
+trojan://telegram-id-privatevpns@63.181.75.67:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#[🏁]t.me/ConfigsHub`
+trojan://telegram-id-directvpn@63.181.75.67:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#[🏁]t.me/ConfigsHub`
+trojan://telegram-id-privatevpns@63.181.75.67:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#[🏁]t.me/ConfigsHub`
