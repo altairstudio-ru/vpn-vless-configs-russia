@@ -1,4 +1,3 @@
-vless://c5c9d8ec-6c95-4f84-a395-de41ef895f34@de31.abvpn.ru:443?security=reality&encryption=none&pbk=Wg_prcp8fAsUrveCKVqBsk_8mWuKurQb-0N3H1e35mk&headerType=none&fp=firefox&type=tcp&sni=cdnjs.cloudflare.com&sid=bb3b14db# Server226| Sonzai X
 vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@3.121.254.171:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk# Server245| Sonzai X
 vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@15.236.169.109:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk# Server261| Sonzai X
 vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@35.180.16.16:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk# Server270| Sonzai X
@@ -498,3 +497,4 @@ vless://16ecb6dd-f6ca-57c6-928c-9634d3171f8e@172.67.139.4:2053?security=tls&sni=
 vless://89b3cbba-e6ac-485a-9481-976a0415eab9@104.19.243.106:2053?security=tls&sni=mahdIsErveR-1Y4.pageS.dev&type=ws&host=maHDisErVER-1y4.PAGES.DeV&path=%2FsmuKNuQYEO7r3LKk%3Fed%3D2560&fp=randomized&alpn=h2%2Chttp%2F1.1# VL-WS-TLS  NA-104.19.243.106:2053
 vless://2514586b-2e1e-4f05-b7c2-b08a62f2147d@104.19.161.177:2053?security=tls&sni=uk1.rustx.ir&type=grpc# VL-GRPC-TLS  NA-104.19.161.177:2053
 vless://1aefdc23-bb34-4b24-a89a-cc54c2dcc80a@173.245.59.100:2086?security=none&type=httpupgrade&host=finland.asraschool.ir&path=%2F%3Fed%3D2560# VL-HTTPUPGRADE-NONE  NA-173.245.59.100:2086
+vless://89b3cbba-e6ac-485a-9481-976a0415eab9@104.21.22.191:443?security=tls&sni=ppAL03.mILos-aSEeL.WORKErS.DEv&type=ws&host=ppAL03.miloS-AseEl.wORkErS.dEV&path=%2Fmue21GvukuV2UU4x%3Fed%3D2560&fp=randomized&alpn=h2%2Chttp%2F1.1# VL-WS-TLS  NA-104.21.22.191:443
