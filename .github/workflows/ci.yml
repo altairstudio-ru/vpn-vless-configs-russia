@@ -1,53 +1,48 @@
-name: Auto Mirror (every 30 minutes)
+name: Auto Key Checker
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: '0 */6 * * *'  # Увеличено до 6 часов — меньше нагрузка
   workflow_dispatch:
 
 permissions:
-  contents: write    # дать GITHUB_TOKEN право коммитить
-
-concurrency:
-  group: auto-mirror
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  update:
+  check-keys:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 60  # 350 минут — избыточно для чекера
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Code
         uses: actions/checkout@v4
         with:
+          fetch-depth: 1
           token: ${{ secrets.GITHUB_TOKEN }}
+        # НЕ ставь continue-on-error: true здесь!
+        # Если checkout упал — дальше бессмысленно
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: '3.11'  # 3.9 устарел, лучше 3.11
+          cache: 'pip'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           pip install --upgrade pip
-          pip install requests==2.32.5 PyGithub==2.8.1
+          pip install -r requirements.txt
 
-      - name: Run mirror script
+      - name: Run Checker Script
+        run: python main.py
+        timeout-minutes: 45
         env:
-          MY_TOKEN: ${{ secrets.MY_TOKEN }}
-        run: |
-          python mirror.py
+          PYTHONUNBUFFERED: '1'  # Видеть логи в реальном времени
 
-      - name: Run RU-SNI filter
-        run: |
-          python filter_ru_sni.py
-
-      - name: Commit githubmirror folder
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add githubmirror
-          git commit -m "Update githubmirror $(date +'%Y-%m-%d %H:%M')" || echo "Nothing to commit"
-          git push
-
+      - name: Commit & Push Results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Auto-update checked keys"
+          file_pattern: "checked/*"
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
