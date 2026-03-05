@@ -2,7 +2,7 @@ name: Auto Key Checker
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Увеличено до 6 часов — меньше нагрузка
+    - cron: '0 */6 * * *'  # каждые 6 часов
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
 jobs:
   check-keys:
     runs-on: ubuntu-latest
-    timeout-minutes: 60  # 350 минут — избыточно для чекера
+    timeout-minutes: 60
 
     steps:
       - name: Checkout Code
@@ -19,13 +19,11 @@ jobs:
         with:
           fetch-depth: 1
           token: ${{ secrets.GITHUB_TOKEN }}
-        # НЕ ставь continue-on-error: true здесь!
-        # Если checkout упал — дальше бессмысленно
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # 3.9 устарел, лучше 3.11
+          python-version: '3.11'
           cache: 'pip'
 
       - name: Install Dependencies
@@ -33,16 +31,28 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Если main.py уже внутри запускает mirror.py и filter'ы, этот шаг не нужен.
+      # Если mirror.py отдельно — можешь раскомментировать блок ниже.
+      #
+      # - name: Update githubmirror (mirror.py)
+      #   run: python mirror.py
+      #   timeout-minutes: 30
+      #   env:
+      #     PYTHONUNBUFFERED: '1'
+
       - name: Run Checker Script
         run: python main.py
         timeout-minutes: 45
         env:
-          PYTHONUNBUFFERED: '1'  # Видеть логи в реальном времени
+          PYTHONUNBUFFERED: '1'
 
       - name: Commit & Push Results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🤖 Auto-update checked keys"
-          file_pattern: "checked/*"
+          commit_message: "🤖 Auto-update checked & githubmirror"
+          file_pattern: |
+            checked/*
+            githubmirror/*
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "actions@github.com"
+
