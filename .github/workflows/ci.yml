@@ -31,7 +31,6 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Сбор свежих прокси-конфигураций (обновление githubmirror)
       - name: Update githubmirror (mirror.py)
         run: python mirror.py
         timeout-minutes: 30
@@ -47,10 +46,8 @@ jobs:
       - name: Commit & Push Results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🤖 Auto-update checked & githubmirror"
-          file_pattern: |
-            checked/**
-            githubmirror/**
+          commit_message: "🤖 Auto-update keys & githubmirror"
+          file_pattern: "."
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "actions@github.com"
 
