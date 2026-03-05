@@ -31,14 +31,12 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Если main.py уже внутри запускает mirror.py и filter'ы, этот шаг не нужен.
-      # Если mirror.py отдельно — можешь раскомментировать блок ниже.
-      #
-      # - name: Update githubmirror (mirror.py)
-      #   run: python mirror.py
-      #   timeout-minutes: 30
-      #   env:
-      #     PYTHONUNBUFFERED: '1'
+      # Сбор свежих прокси-конфигураций (обновление githubmirror)
+      - name: Update githubmirror (mirror.py)
+        run: python mirror.py
+        timeout-minutes: 30
+        env:
+          PYTHONUNBUFFERED: '1'
 
       - name: Run Checker Script
         run: python main.py
