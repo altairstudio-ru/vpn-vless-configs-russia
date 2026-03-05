@@ -31,18 +31,40 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Сбор свежих прокси-конфигураций (обновление githubmirror)
+      # 1) mirror.py — обновляет githubmirror/*
       - name: Update githubmirror (mirror.py)
         run: python mirror.py
         timeout-minutes: 30
         env:
           PYTHONUNBUFFERED: '1'
 
+      # 2) debug-вывод: есть ли изменения в githubmirror
+      - name: Debug git status after mirror
+        run: |
+          echo "=== git status (short) ==="
+          git status -sb
+          echo ""
+          echo "=== changed files under githubmirror ==="
+          git status --porcelain githubmirror || true
+          echo ""
+          echo "=== list githubmirror tree ==="
+          ls -R githubmirror || true
+
+      # 3) основной чекер (checked/*)
       - name: Run Checker Script
         run: python main.py
         timeout-minutes: 45
         env:
           PYTHONUNBUFFERED: '1'
+
+      # 4) ещё один debug перед коммитом — вдруг main что-то тоже тронул
+      - name: Debug git status before commit
+        run: |
+          echo "=== git status (short) BEFORE COMMIT ==="
+          git status -sb
+          echo ""
+          echo "=== changed files under githubmirror & checked ==="
+          git status --porcelain githubmirror checked || true
 
       - name: Commit & Push Results
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -53,4 +75,5 @@ jobs:
             githubmirror/*
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "actions@github.com"
+
 
