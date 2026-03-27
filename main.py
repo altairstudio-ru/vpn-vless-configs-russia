@@ -58,14 +58,6 @@ logger = setup_logging()
 def run_script(script_name: str, description: str, timeout: int = 300) -> bool:
     """
     Универсальный запускатель скриптов с логированием
-    
-    Args:
-        script_name: имя файла скрипта (например, "mirror.py")
-        description: описание для логов
-        timeout: таймаут в секундах
-    
-    Returns:
-        True если скрипт завершился успешно, False иначе
     """
     logger.info(f"🚀 Запуск {script_name} ({description})...")
     
@@ -122,11 +114,11 @@ def run_mirror_script():
     )
 
 
-def run_mirror_nofilter_script():
-    """Запуск скрипта пересборки без гео-фильтра (no-filter)"""
+def run_mirror_all_raw_script():
+    """Запуск скрипта ALL RAW без гео-фильтра (no-filter)"""
     return run_script(
-        "mirror_nofilter.py",
-        "Пересборка без geo-фильтра (no-filter)",
+        "mirror_all_raw.py",
+        "ALL RAW без geo-фильтра (no-filter)",
         timeout=600
     )
 
@@ -165,9 +157,7 @@ def collect_statistics():
             }
         }
         
-        # ────────────────────────────────────────────────────────────────
         # Статистика по githubmirror/clean (после географ. фильтра)
-        # ────────────────────────────────────────────────────────────────
         clean_dir = BASE_DIR / "githubmirror" / "clean"
         if clean_dir.exists():
             logger.info("  📁 githubmirror/clean:")
@@ -185,9 +175,7 @@ def collect_statistics():
         else:
             logger.warning("  ⚠️  Директория githubmirror/clean не найдена")
         
-        # ────────────────────────────────────────────────────────────────
         # Статистика по ru-sni (после основного SNI-фильтра)
-        # ────────────────────────────────────────────────────────────────
         ru_sni_dir = BASE_DIR / "githubmirror" / "ru-sni"
         if ru_sni_dir.exists():
             logger.info("  📁 githubmirror/ru-sni:")
@@ -240,7 +228,7 @@ def check_dependencies():
     
     required_scripts = [
         "mirror.py",
-        "mirror_nofilter.py",      # ← новый скрипт
+        "mirror_all_raw.py",      # no-filter этап на базе ALL RAW
         "filter_ru_sni.py",
         "filter_ru_sni_local.py",
     ]
@@ -278,7 +266,7 @@ def main():
     
     steps = [
         ("mirror",        "Загрузка и geo-фильтрация",              run_mirror_script),
-        ("mirror_noflt",  "Пересборка без geo-фильтра (no-filter)", run_mirror_nofilter_script),
+        ("mirror_allraw", "ALL RAW без geo-фильтра (no-filter)",    run_mirror_all_raw_script),
         ("filter_sni",    "Фильтрация по реальному SNI",            run_filter_script),
         ("filter_ru",     "Экспериментальный RU-SNI фильтр",        run_filter_local_script),
         ("stats",         "Сбор статистики",                        collect_statistics),
