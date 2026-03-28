@@ -6,7 +6,7 @@ hysteria2://05f1e2ad-1d21-449b-9bbb-97a8b4662934@ty17.twty.dynu.net:8991/?insecu
 hysteria2://0a93714f-7944-4cb1-a955-c602db605e85@teq.dport.top:33658?security=tls&amp;obfs=salamander&amp;obfs-password=ZDQxZDhjZDk4ZjAwYjIwNA==&amp;insecure=1&amp;sni=teq.dport.top#@v2rayCrow
 hysteria2://0e1a66ab-5313-45b3-90e8-ab2a62ff1bdf@107.175.194.57:8882?sni=cn.bing.com&amp;alpn=h3&amp;insecure=1#RN-3T3天
 hysteria2://11723737-7318-4aba-b701-31d2d2f71ed3@hhl.0101.pw:8444?sni=hhl.0101.pw#%F0%9F%87%B3%F0%9F%87%B1%20%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%3Adafei.de%20%E8%8D%B7%E5%85%B0%2003
-hysteria2://123456789StrongPass@144.31.224.14:443/?insecure=1#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%5B%2ACIDR%5D
+hysteria2://123456789StrongPass@144.31.224.14:443/?insecure=1&sni=www.cloudflare.com#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%5B%2ACIDR%5D
 hysteria2://15aa1dfe-99d1-4bbb-bd53-2f5ff032a539@hkt.aiopen.sbs:443/?insecure=1&sni=tv.apple.com#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A0
 hysteria2://16b19122-476d-4fa8-937c-d9746b98a22f@13.125.142.120:45565/?insecure=1&sni=kr1.xjichang.buzz#%E9%9F%A9%E5%9B%BD01
 hysteria2://16b19122-476d-4fa8-937c-d9746b98a22f@154.217.64.155:45565/?insecure=1&sni=us2.xjichang.buzz#%E7%BE%8E%E5%9B%BD03
@@ -74,7 +74,7 @@ hysteria2://af9e1b9f-3ee6-4184-a330-bb110419687a@jp.555199.xyz:20000/?insecure=0
 hysteria2://af9e1b9f-3ee6-4184-a330-bb110419687a@sg.555199.xyz:5000/?insecure=0&sni=sg.555199.xyz&mport=5000-12000#%E7%A7%BB%E5%8A%A8%E7%94%A8%E6%96%B0%E5%8A%A0%E5%9D%A11
 hysteria2://af9e1b9f-3ee6-4184-a330-bb110419687a@us.555199.xyz:5000/?insecure=0&sni=sg.555199.xyz&mport=5000-12000#%E4%BD%BF%E7%94%A8%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E8%BD%AF%E4%BB%B6
 hysteria2://auth@49.12.142.89:443?insecure=1&amp;sni=www.microsoft.com&amp;alpn=h3&amp;fastopen=1&amp;up=50&amp;down=100#outline_ir
-hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@181.214.99.162:35000/?obfs=salamander&obfs-password=%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi&sni=api.kermanshahi.org#%F0%9F%A7%AB4@oneclickvpnkeys
+hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@181.214.99.162:35000?security=tls&amp;obfs=salamander&amp;obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&amp;insecure=1&amp;sni=api.kermanshahi.org#
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@206.71.158.40:35000/?insecure=1&obfs=salamander&obfs-password=%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi&sni=www.speedtest.net#🇳🇱NL%20%20ROSE—15
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@206.71.158.41:35000/?insecure=1&amp;obfs=salamander&amp;obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&amp;sni=api.kermanshahi.org#🚀93@oneclickvpnkeys
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@5.175.249.174:35000/?obfs=salamander&amp;obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&amp;sni=api.kermanshahi.org#🚀94@proxy_kafee
@@ -85,13 +85,12 @@ hysteria2://c8750ad3-8ba9-4b33-bbdb-e7798845a629@15.204.129.38:33333?security=tl
 hysteria2://cd7e0971-4b98-41fc-9ecb-1267a2b0e4f4@hkbgp.jjxcloud.xyz:8443/?sni=hkbgp.jjxcloud.xyz#🇭🇰HK%20%20ROSE—08
 hysteria2://dongtaiwang.com@208.87.243.187:22222?security=tls&insecure=1&sni=🔒
 hysteria2://dongtaiwang.com@51.159.111.32:5355?security=tls&amp;insecure=1&amp;sni=www.bing.com#🇫🇷
-hysteria2://dongtaiwang.com@62.210.124.146:22000?security=tls&sni=www.microsoft.com&allowInsecure=true#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20%F0%9F%8C%90%20%7C%20%5BIPv6%5D%20%5B%2ACIDR%5D
+hysteria2://dongtaiwang.com@62.210.124.146:22000/?insecure=1&sni=www.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20%F0%9F%8C%90%20%7C%20%5BIPv6%5D%20%5B%2ACIDR%5D
 hysteria2://dongtaiwang.com@[2001:bc8:32d7:302::11]:20088?security=tls&amp;insecure=1&amp;sni=apple.com#🇫🇷
 hysteria2://e343471a-aad3-40da-9dea-72cc8c7dce5f@146.56.164.36:443?security=tls&amp;insecure=1&amp;mport=35000-39000&amp;sni=api.push.apple.com#All-@ARGO_VPN1
 hysteria2://e343471a-aad3-40da-9dea-72cc8c7dce5f@152.69.220.212:443?security=tls&amp;insecure=1&amp;mport=35000-39000&amp;sni=api.push.apple.com#All-@ARGO_VPN1
 hysteria2://germany_hysteria2_fastlane_wxue2k6d6:3Vbo9kzJszWmSzGIjnoytB2F98O023VD@150.241.79.106:1935?security=tls&amp;insecure=1&amp;sni=de2.h.fastlanehosting.ru#@darktunnelvip1
-hysteria2://hysteria2_fastlane_4il18i3ep%3A8OoOXsA2LkNBLA3NH5WL6vKUwtO9NlYB@150.241.79.201:1935/?sni=de5.h.fastlanehosting.ru#%F0%9F%A7%AB32@oneclickvpnkeys
-hysteria2://hysteria2_fastlane_bi5ckyc9g%3A6xXOTBmadP61nZ27MJH90ahkRhXVAe9H@144.31.118.145:1935/?sni=de8.h.fastlanehosting.ru#%F0%9F%A7%AB35@oneclickvpnkeys
+hysteria2://hysteria2_fastlane_4il18i3ep%3A8OoOXsA2LkNBLA3NH5WL6vKUwtO9NlYB@150.241.79.201:1935/?sni=de5.h.fastlanehosting.ru#%F0%9F%A7%AB32@oneclickvpnkeysvless://ad51da8f-c04c-4843-afaa-295accf942e3@185.116.214.253:443?encryption=none&fp=chrome&pbk=upQDBPxUldlllbz4A_Zp4YAHM_sIkyQxIbQvRryKm1s&security=reality&sid=86&sni=www.google.com&type=tcp#%F0%9F%A7%AB33@oneclickvpnkeysvless://6202b230-417c-4d8e-b624-0f71afa9c75d@57.129.63.154:2053?allowInsecure=1&encryption=none&host=sni.111000.dynv6.net&path=%2F%3FTelegram%E9%A6%83%E5%9A%9A%E9%A6%83%E5%9A%A6+%40WangCai2%3D&security=tls&sni=sni.111000.dynv6.net&type=ws#%F0%9F%A7%AB34@oneclickvpnkeys
 hysteria2://hysteria2_fastlane_bwyx9htpr%3AoEo7UUYjxOcBooNu080XVIFCbge59vqG@144.31.63.58:1935/?sni=de4.h.fastlanehosting.ru#%F0%9F%A7%AB69@oneclickvpnkeys
 hysteria2://linux.do@[2a01:4f9:4b:f378::1]:13599?security=tls&amp;insecure=1&amp;sni=www.bing.com#@V2rayNG3
 hysteria2://sharecentrepro@210.231.184.93:4433?peer=jpntt2.sharecentre.online&obfs=none#SCP2
@@ -100,4 +99,4 @@ hysteria2://sharecentrepro@twgcp.sharecentre.online:4433?peer=twgcp.sharecentre.
 hysteria2://sharecentrepro@us.scproxy.top:4433?peer=us.scproxy.top&obfs=none#SCP1
 hysteria2://sharecentrepro@ushy2.sharecentre.online:4433?peer=ushy2.sharecentre.online&obfs=none#SCP1
 hysteria2://sharecentrepro@ushy2.sharecentre.online:4434?peer=ushy2.sharecentre.online&obfs=none#SCP1
-hysteria2://zhangyang@130.61.50.75:6443/?insecure=1&sni=dash.cloudflare.com#%F0%9F%A7%AB1@oneclickvpnkeys
+hysteria2://zhangyang@130.61.50.75:6443/?insecure=1&sni=dash.cloudflare.com#🇩🇪DE%20%20ROSE—04
