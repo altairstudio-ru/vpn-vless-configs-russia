@@ -4,7 +4,7 @@ import json
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-from Mirror import URLS_BASE, CONFIG_SOURCES_FILE  # Mirror.py в корне репо
+from mirror import URLS_BASE, CONFIG_SOURCES_FILE  # импорт из mirror.py (нижний регистр)
 
 MERMEROO_FILE = os.path.join(BASE_PATH, "mermeroo_sources.txt")
 OUT_FILE = os.path.join(BASE_PATH, "mermeroo_only_new_for_mirror.txt")
@@ -49,7 +49,7 @@ def main():
     mer_all = load_mermeroo_sources()
     print(f"Всего в mermeroo_sources.txt: {len(mer_all)}")
 
-    # Все источники, которые уже знает Mirror (URLS_BASE + config_sources.json)
+    # Все источники, которые уже знает mirror.py
     known_urls = set(URLS_BASE)
     known_urls |= load_config_sources()
 
