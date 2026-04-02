@@ -9,6 +9,7 @@ from mirror import URLS_BASE, CONFIG_SOURCES_FILE  # mirror.py в корне р�
 
 MERMEROO_FILE = os.path.join(BASE_PATH, "mermeroo_sources.txt")
 OUT_FILE = os.path.join(BASE_PATH, "mermeroo_only_new_for_mirror.txt")
+OUT_EXTRA_FILE = os.path.join(BASE_PATH, "mermeroo_extra_sources.txt")
 
 
 def load_mermeroo_sources(path=MERMEROO_FILE):
@@ -44,7 +45,6 @@ def extract_repo_key(url: str) -> str:
         except Exception:
             return url
 
-    # github.com/.../raw/...
     if "github.com" in url and "/raw/" in url:
         parts = url.split("/")
         try:
@@ -58,7 +58,7 @@ def extract_repo_key(url: str) -> str:
     return url
 
 
-# ✅ оставляем только «нормальные» источники
+# ✅ оставляем только «нормальные» источники для mirror.py
 def is_good_source_url(url: str) -> bool:
     u = urlparse(url)
 
@@ -134,8 +134,14 @@ def main():
     # 5) сохраняем только новые «нормальные» URL в файл
     with open(OUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(mer_new_urls))
-
     print(f"\nСписок новых отфильтрованных URL сохранён в {OUT_FILE}")
+
+    # 6) сохраняем «нестандартные» источники отдельно, чтобы они не потерялись
+    mer_bad = [u for u in mer_all if u not in mer_filtered]
+    if mer_bad:
+        with open(OUT_EXTRA_FILE, "w", encoding="utf-8") as f:
+            f.write("\n".join(sorted(set(mer_bad))))
+        print(f"Дополнительные источники (clash/proxies, subscribe, сайты) сохранены в {OUT_EXTRA_FILE}")
 
 
 if __name__ == "__main__":
