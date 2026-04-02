@@ -1,12 +1,12 @@
-name: Parse & Compare mermeroo sources
+name: Parse, Compare & Merge mermeroo sources
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 */6 * * *"   # каждые 6 часов, сдвиг на 15 минут от первого
+    - cron: "15 */6 * * *"
 
 jobs:
-  parse-and-compare:
+  parse-compare-merge:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -25,18 +25,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run parser (SUB LINKS -> mermeroo_sources.txt)
+      - name: Parse mermeroo SUB LINKS
         run: |
           python parse_mermeroo.py
 
-      - name: Compare with Mirror sources
+      - name: Compare with mirror sources
         run: |
           python compare_mermeroo_mirror.py
 
-      - name: Commit & push new files
+      - name: Merge new sources into config_sources.json
+        run: |
+          python merge_mermeroo_to_config_sources.py
+
+      - name: Commit & push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add mermeroo_sources.txt mermeroo_only_new_for_mirror.txt
-          git diff --cached --quiet || git commit -m "Update mermeroo sources and diff for Mirror"
+          git add mermeroo_sources.txt mermeroo_only_new_for_mirror.txt config_sources.json
+          git diff --cached --quiet || git commit -m "Update mermeroo-derived sources"
           git push
