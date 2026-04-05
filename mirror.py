@@ -50,6 +50,9 @@ GOOD_TAGS = [
 # ✅ НОВЫЙ СПИСОК ИСТОЧНИКОВ (объединённый, уникальный, только raw‑ссылки)
 URLS_BASE = [
     # --- Набор A (подписочные источники) ---
+    # free-nodes
+    "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v2",
+    # Epodonios и прочие
     "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
     "https://raw.githubusercontent.com/Pawdro/Collection/main/sub",
@@ -402,7 +405,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
 
 
 
