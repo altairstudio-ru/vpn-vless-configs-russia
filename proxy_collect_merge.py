@@ -122,6 +122,15 @@ def load_manifest_urls():
     return urls
 
 
+# --- добавлено: автозапись в config_sources.json ---
+def save_sources(urls: set[str]) -> None:
+    data = sorted(urls)
+    with open(CONFIG_SOURCES_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"✅ Записано {len(data)} источников в {CONFIG_SOURCES_FILE}")
+# ---------------------------------------------------
+
+
 def main():
     manifest_urls_all = load_manifest_urls()
     print(f"Всего URL из manifest.json: {len(manifest_urls_all)}")
@@ -143,6 +152,7 @@ def main():
     for r in man_new_repos:
         print("  ", r)
 
+    # сохраняем список только новых, как и раньше
     with open(OUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(manifest_new_urls))
     print(f"\nСписок новых отфильтрованных URL сохранён в {OUT_FILE}")
@@ -152,6 +162,16 @@ def main():
         with open(OUT_EXTRA_FILE, "w", encoding="utf-8") as f:
             f.write("\n".join(sorted(set(man_bad))))
         print(f"Дополнительные источники (подозрительные/нестандартные) сохранены в {OUT_EXTRA_FILE}")
+
+    # --- добавлено: автоприменение в config_sources.json ---
+    merged = known_urls.union(manifest_filtered)
+    added = len(merged) - len(known_urls)
+    print(f"\n🔹 Всего известных URL после слияния: {len(merged)} (добавлено {added})")
+    if added > 0:
+        save_sources(merged)
+    else:
+        print("ℹ️ Новых источников нет, config_sources.json не меняем")
+    # ------------------------------------------------------
 
 
 if __name__ == "__main__":
