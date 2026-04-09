@@ -37,6 +37,11 @@ jobs:
         env:
           PYTHONUNBUFFERED: '1'
 
+      - name: Merge sources from proxy-collect manifest
+        run: python proxy_collect_merge.py
+        env:
+          PYTHONUNBUFFERED: '1'
+
       - name: Run Checker Script
         run: python main.py
         timeout-minutes: 45
