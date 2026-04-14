@@ -38,13 +38,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Pull latest changes before committing
-        run: git pull origin main --rebase
-
-      - name: Add and commit
+      - name: Commit changes
         run: |
           git add mermeroo_sources.txt mermeroo_only_new_for_mirror.txt mermeroo_extra_sources.txt config_sources.json
           git diff --cached --quiet || git commit -m "Update mermeroo-derived sources [$(date +%Y-%m-%d)]"
 
-      - name: Push
-        run: git push origin main
+      - name: Pull and push
+        run: |
+          git stash --include-untracked || true
+          git pull origin main --rebase
+          git stash pop || true
+          git push origin main
