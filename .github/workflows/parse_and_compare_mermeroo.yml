@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Полная история для pull/rebase[web:17]
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -41,10 +41,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add mermeroo_sources.txt mermeroo_only_new_for_mirror.txt mermeroo_extra_sources.txt config_sources.json
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
+          if ! git diff --cached --quiet; then
             git commit -m "Update mermeroo-derived sources [$(date +%Y-%m-%d)]"
-            git pull origin main --rebase  # Синхронизация с remote[web:1][web:11][web:20]
+            git pull origin main --rebase
             git push origin main
-          fi[web:15][web:25]
+          else
+            echo "No changes to commit"
+          fi[web:25][web:32]
