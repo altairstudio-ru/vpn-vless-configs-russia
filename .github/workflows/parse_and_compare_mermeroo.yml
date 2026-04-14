@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Полная история для pull/rebase[web:17]
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -26,21 +28,23 @@ jobs:
           pip install requests
 
       - name: Parse mermeroo SUB LINKS
-        run: |
-          python parse_mermeroo.py
+        run: python parse_mermeroo.py
 
       - name: Compare with mirror sources
-        run: |
-          python compare_mermeroo_mirror.py
+        run: python compare_mermeroo_mirror.py
 
       - name: Merge new sources into config_sources.json
-        run: |
-          python merge_mermeroo_to_config_sources.py
+        run: python merge_mermeroo_to_config_sources.py
 
       - name: Commit & push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add mermeroo_sources.txt mermeroo_only_new_for_mirror.txt mermeroo_extra_sources.txt config_sources.json
-          git diff --cached --quiet || git commit -m "Update mermeroo-derived sources"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update mermeroo-derived sources [$(date +%Y-%m-%d)]"
+            git pull origin main --rebase  # Синхронизация с remote[web:1][web:11][web:20]
+            git push origin main
+          fi[web:15][web:25]
