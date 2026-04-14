@@ -36,15 +36,17 @@ jobs:
       - name: Merge new sources into config_sources.json
         run: python merge_mermeroo_to_config_sources.py
 
-      - name: Commit & push changes
+      - name: Setup git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add and commit
+        run: |
           git add mermeroo_sources.txt mermeroo_only_new_for_mirror.txt mermeroo_extra_sources.txt config_sources.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update mermeroo-derived sources [$(date +%Y-%m-%d)]"
-            git pull origin main --rebase
-            git push origin main
-          else
-            echo "No changes to commit"
-          fi[web:25][web:32]
+          git diff --cached --quiet || git commit -m "Update mermeroo-derived sources [$(date +%Y-%m-%d)]"
+
+      - name: Pull and push
+        run: |
+          git pull origin main --rebase
+          git push origin main[web:1][web:32]
