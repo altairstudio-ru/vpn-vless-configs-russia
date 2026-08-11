@@ -5,7 +5,8 @@ hysteria://195.154.200.40:15010?upmbps=100&downmbps=100&auth=dongtaiwang.com&ins
 hysteria://199.247.7.82:8443?peer=de-hysteria.racevpn.com&upmbps=10&downmbps=50&obfs=xplus&obfsParam=2r6wMYUuXANFDfn#🔒 HYSTERIA-UDP 🇩🇪 DE-199.247.7.82:8443 📡 PING-000.00-MS
 hysteria://199.247.9.177:8443?peer=fr-hysteria.racevpn.com&upmbps=10&downmbps=50&obfs=xplus&obfsParam=U9kBKzCt5buOOQa#🔒 HYSTERIA-UDP 🇫🇷 FR-199.247.9.177:8443 📡 PING-000.00-MS
 hysteria://45.152.115.205:15666?insecure=1&upmbps=5&downmbps=12&obfs=xplus&obfsParam=Q_vtX%25%24R#🔒 HYSTERIA-UDP 🇳🇱 NL-45.152.115.205:15666 📡 PING-000.00-MS
-hysteria://5.83.129.143:26691?alpn=h3&auth_str=dongtaiwang.com&downmbps=55 Mbps&obfsParam=&protocol=udp&insecure=1&peer=apple.com&sub_tag=K001-260618&upmbps=11 Mbps&udp=true#%F0%9F%87%A9%F0%9F%87%AADE_61%7C237KB%2Fs%7CK001-260618%2001
+hysteria://5.83.129.143:26691?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&downmbps=55 Mbps&protocol=udp&insecure=1&peer=apple.com&upmbps=11 Mbps#%F0%9F%87%A9%F0%9F%87%AADE_1%7C1.3MB%2Fs%7CGPT%E2%81%BA%7CD%2B%7C25%25
+hysteria://5.83.129.153:20088?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&downmbps=1000&protocol=udp&insecure=1&peer=apple.com&udp=true&upmbps=500#%F0%9F%87%A9%F0%9F%87%AADE_2%7C1.7MB%2Fs%7CGPT%E2%81%BA%7CD%2B%7C25%25
 hysteria://5.83.129.90:54177?alpn=h3&auth_str=dongtaiwang.com&downmbps=1000&obfsParam=&protocol=udp&insecure=1&peer=apple.com&sub_tag=C002-260622&upmbps=500&udp=true#%F0%9F%87%A9%F0%9F%87%AADE_49%7C278KB%2Fs%7CC002-260622%2001
 hysteria://51.158.54.46:11926/?insecure=1&peer=youku.com&auth=Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs&upmbps=11&downmbps=55&alpn=h3
 hysteria://51.158.54.46:49139?peer=www.paypal.com&auth=dongtaiwang.com&insecure=1&upmbps=50&downmbps=100&alpn=h3&obfs=&protocol=udp&fastopen=1#🔒 HYSTERIA-UDP 🇫🇷 FR-51.158.54.46:49139 📡 PING-000.00-MS
