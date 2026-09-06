@@ -224,7 +224,7 @@ trojan://010bd080-2133-11f0-a064-1239d0255272@uk1.test3.net:443?security=tls&hea
 trojan://01596265-168b-46a7-bcb7-25662c7a9546@188.114.97.247:443?security=tls&sni=hdfy7c1.foriran2.eu.org&fp=safari&type=grpc&serviceName=fYn1ncaQMA1foaK1hpquM#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20,%20Stockholm
 trojan://01596265-168b-46a7-bcb7-25662c7a9546@188.114.98.0:443?security=tls&sni=hdfy7c1.foriran2.eu.org&allowInsecure=1&type=grpc&serviceName=fYn1ncaQMA1foaK1hpquM #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://01596265-168b-46a7-bcb7-25662c7a9546@188.114.98.0:443?type=grpc&sni=hdfy7c1.foriran2.eu.org&allowInsecure=1&serviceName=fYn1ncaQMA1foaK1hpquM#%F0%9F%87%B3%F0%9F%87%B1_16
-trojan://018b8e7b-7813-4dcb-84a5-3c98f1521e00@104.21.70.21:443?path=/trojan&security=tls&fm={"tcp":[{"type":"fragment","settings":{"packets":"tlshello","lengths":["5","94","1"],"delays":["0"],"maxSplit":"0"}},{"type":"fragment","settings":{"packets":"1-1","lengths":["109","1"],"delays":["1"],"maxSplit":"355"}}]}&insecure=0&host=id1.nathaya.web.id&fp=unsafe&type=ws&allowInsecure=0&sni=id1.nathaya.web.id #🌐 [ Configs by DukeMehdi ] TJ-XX
+trojan://018b8e7b-7813-4dcb-84a5-3c98f1521e00@104.21.70.21:443?security=tls&type=ws&sni=id1.nathaya.web.id&path=/trojan #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://018b8e7b-7813-4dcb-84a5-3c98f1521e00@104.21.70.21:8080?security=none&type=ws&host=id1.nathaya.web.id&path=%2Ftrojan&fm=%7B%22tcp%22%3A%20%5B%7B%22type%22%3A%20%22fragment%22%2C%20%22settings%22%3A%20%7B%22packets%22%3A%20%221-1%22%2C%20%22lengths%22%3A%20%5B%221%22%5D%2C%20%22delays%22%3A%20%5B%224%22%5D%2C%20%22maxSplit%22%3A%20%22355%22%7D%7D%5D%7D #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://018b8e7b-7813-4dcb-84a5-3c98f1521e00@edu.ruangguru.com:443/?type=ws&host=id1.nathaya.web.id&path=/trojan&security=tls&sni=id1.nathaya.web.id&allowInsecure=1 #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://01dd9960-ed03-11ed-ba5d-1239d0255272@51.158.146.183:443?security=tls&sni=www.adge.com&allowInsecure=1&type=tcp#%F0%9F%87%B3%F0%9F%87%B1%20Netherlands%20-%20Amsterdam%20%F0%9F%8C%8D%20TR-TCP-TLS%204%E2%83%A3
@@ -298,7 +298,7 @@ trojan://072f4db4-d89d-420d-9d9e-045ed8d5c9cc@172.67.162.74:443/?type=tcp&securi
 trojan://072f4db4-d89d-420d-9d9e-045ed8d5c9cc@172.67.215.15:443/?type=tcp&security=tls&sni=10xcvb.he2022.filegear-sg.me #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://07301100-4684-11f0-9ffa-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://07301100-4684-11f0-9ffa-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp# By EbraSha
-trojan://07301100-4684-11f0-9ffa-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp# By EbraSha 🦾
+trojan://07301100-4684-11f0-9ffa-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp# By EbraSha 🔌
 trojan://07301100-4684-11f0-9ffa-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#[120][GB][0][TROJAN][None][ext_raw.githubusercontent.com][2026-08-16][2026-08-16 00:34]
 trojan://07301100-4684-11f0-9ffa-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#[120][GB][0][TROJAN][None][ext_raw.githubusercontent.com][2026-09-04][2026-09-04 01:43]
 trojan://075b9690-f1cc-4d0c-aa1e-f80f07f09815@104.21.69.50:443/?type=tcp&security=tls&sni=4o.191292.xyz #🌐 [ Configs by DukeMehdi ] TJ-XX
@@ -379,7 +379,7 @@ trojan://0b65bb06-6b28-487a-8e3c-820dda51e977@series-v1.samanehha.co:443?securit
 trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443/?type=tcp&security=tls&sni=uk1.test3.net# By EbraSha
 trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443?allowInsecure=0&sni=uk1.test3.net&ws=1&wspath=%25252Fhowdy #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443?allowInsecure=0&sni=uk1.test3.net&ws=1&wspath=%25252Fhowdy# By EbraSha
-trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443?allowInsecure=0&sni=uk1.test3.net&ws=1&wspath=%25252Fhowdy# By EbraSha 🪖
+trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443?allowInsecure=0&sni=uk1.test3.net&ws=1&wspath=%25252Fhowdy# By EbraSha 🪬
 trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443?allowInsecure=0&sni=uk1.test3.net&ws=1&wspath=%25252Fhowdy#4FreeIran-3089
 trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443?allowInsecure=0&sni=uk1.test3.net&ws=1&wspath=%25252Fhowdy#4Kian-3093
 trojan://0b971bb0-f0af-11ee-8f57-1239d0255272@172.67.159.13:443?allowInsecure=0&sni=uk1.test3.net&ws=1&wspath=%25252Fhowdy#4Kian-3145
@@ -419,7 +419,7 @@ trojan://0ddc8080-d295-11ef-9213-1239d0255272@uk1.test3.net:443?security=tls&hea
 trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@51.38.65.155:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @Raydikalx | 8A6C3F
 trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp# By EbraSha
-trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp# By EbraSha 🔌
+trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp# By EbraSha 📛
 trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @Raydikalx | 9097DA
 trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#[193][GB][0][TROJAN][None][ext_raw.githubusercontent.com][2026-09-04][2026-09-04 01:43]
 trojan://0e17b420-48a2-11f0-8c4d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#[240][GB][0][TROJAN][None][ext_raw.githubusercontent.com][2026-08-16][2026-08-16 00:34]
@@ -458,7 +458,6 @@ trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@hnm.xiaohouzi.club:49361?security=
 trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@hnm.xiaohouzi.club:49363?security=tls&sni=hnm.xiaohouzi.club #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@hnm.xiaohouzi.club:49363?security=tls&sni=hnm.xiaohouzi.club#%F0%9F%87%B3%F0%9F%87%B1NL-2.59.170.20-1227
 trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@iplc.xiaohouzi.club:20015?security=tls&sni=$$$supaz05.xiaohouzi.club #🌐 [ Configs by DukeMehdi ] TJ-XX
-trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@iplc.xiaohouzi.club:20015?security=tls&sni=$$$supaz05.xiaohouzi.club#%F0%9F%87%B3%F0%9F%87%B1162106%20%7C%20%E2%9A%A1%EF%B8%8FTelegram%20%3D%20t.me%2FSOSkeyNET
 trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@iplc.xiaohouzi.club:20018?security=tls&sni=$iplc.xiaohouzi.club #🌐 [ Configs by DukeMehdi ] TJ-XX
 trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@iplc.xiaohouzi.club:20018?security=tls&sni=$iplc.xiaohouzi.club#%F0%9F%87%B3%F0%9F%87%B1NL-2.59.170.20-1376
 trojan://0f098bb2-9fad-3cc3-8acf-2a3268c1eb27@iplc.xiaohouzi.club:20032?security=tls&sni=$$hk-azure02.xiaohouzi.club #🌐 [ Configs by DukeMehdi ] TJ-XX
@@ -472,7 +471,7 @@ trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?allowInsecure=1
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?allowInsecure=1&sni=ukt1.sshocean.net#GB 🇬🇧 | @Raydikalx | A41939
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net #🇫🇷 [ Configs by DukeMehdi ] TJ-FR
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net# By EbraSha
-trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net# By EbraSha ⚡
+trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net# By EbraSha 🐉
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net# b2n.ir/v2ray-configs | 145
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net# b2n.ir/v2ray-configs | 147
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net# b2n.ir/v2ray-configs | 166
@@ -498,3 +497,4 @@ trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sn
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net#4Mohsen-3136
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net#4Mohsen-3142
 trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net#4Mohsen-3150
+trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sni=ukt1.sshocean.net#4Sarina-3130
